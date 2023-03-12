@@ -1,0 +1,23 @@
+{
+    "d7ContextResponseCookie": {
+        "prefix": ["d7ContextResponseCookie","d7ResponseCookie","d7Cookie"],
+        "body": [
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$response = $context->getResponse();",
+            "",
+            "\\$cookie = new \\\\Bitrix\\\\Main\\\\Web\\\\Cookie('TEST', 42);",
+            "//$cookie->setDomain(SITE_SERVER_NAME);",
+            "\\$response->addCookie($cookie);"
+        ],
+        "description": ""
+    },
+    "D7context": {
+        "prefix": "d7ContextRequestCookie",
+        "body": [
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$request = \\$context->getRequest();",
+            "$Test = $request->getCookie('TEST');"
+        ],
+        "description": ""
+    }
+}
