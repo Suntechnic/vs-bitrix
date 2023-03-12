@@ -3,12 +3,12 @@
         "prefix": "CIBlockSectionAdd",
         "body": [
             "\\$rsSect = new CIBlockSection;",
-            "\\$arFields = array(",
+            "\\$dctFields = array(",
             "\t'ACTIVE'    => 'Y',",
             "\t'IBLOCK_ID' => '${1:iblock_id}',",
             "\t'NAME'      => '${2:name}',",
             ");",
-            "if(!\\$id = \\$rsSect->Add(\\$arFields)) {",
+            "if(!\\$id = \\$rsSect->Add(\\$dctFields)) {",
             "\techo 'Error:' . \\$rsSect->LAST_ERROR;",
             "}"
         ],
@@ -17,15 +17,15 @@
     "CIBlockSection.Delete": {
         "prefix": "CIBlockSectionDel",
         "body": [
-            "CIBlockSection::Delete(${1:'SectionID'});"
+            "\\\\CIBlockSection::Delete(${1:'SectionID'});"
         ],
         "description": "Удаляет раздел из информационного блока."
     },
     "CIBlockSection.GetByID": {
         "prefix": "CIBlockSectionID",
         "body": [
-            "\\$arSection = CIBlockSection::GetByID(${1:'SectionID'})->fetch();",
-            "if(is_array(\\$arSection)) {",
+            "\\$dctSection = CIBlockSection::GetByID(${1:'SectionID'})->fetch();",
+            "if(is_array(\\$dctSection)) {",
             "\t${2://body ...}",
             "}"
         ],
@@ -34,7 +34,7 @@
     "CIBlockSection.GetList": {
         "prefix": "CIBlockSectionList",
         "body": [
-            "\\$rsSection = CIBlockSection::GetList(",
+            "\\$rsSection = \\\\CIBlockSection::GetList(",
             "\t\\$arOrder  = array('SORT' => 'ASC'),",
             "\t\\$arFilter = array(",
             "\t\t'ACTIVE'    => 'Y',",
@@ -44,8 +44,8 @@
             "\t\\$arSelect = array('ID', 'NAME', 'IBLOCK_ID', 'CODE', 'UF_*'),",
             "\tfalse",
             ");",
-            "while(\\$arSection = \\$rsSection->fetch()) {",
-            "\tvar_export(\\$arSection);",
+            "while(\\$dctSection = \\$rsSection->fetch()) {",
+            "\tvar_export(\\$dctSection);",
             "}"
         ],
         "description": "Возвращает список разделов по фильтру."
@@ -54,11 +54,11 @@
         "prefix": "CIBlocSectionUpdate",
         "body": [
             "\\$rsSection = new CIBlockSection;",
-            "\\$arFields = array(",
+            "\\$dctFields = array(",
             "\t'ACTIVE' => 'Y',",
             "\t${2://...}",
             ");",
-            "\\$rsIDSection = \\$rsSection->Update(${1:'id'}, \\$arFields);"
+            "\\$rsIDSection = \\$rsSection->Update(${1:'id'}, \\$dctFields);"
         ],
         "description": "Изменяет параметры существующего раздела."
     }

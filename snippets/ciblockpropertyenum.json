@@ -1,15 +1,18 @@
 {
 	"CIBlockPropertyEnum-sort": {
 		"scope": "php",
-		"prefix": "свойство сортировка списка значений",
+		"prefix": ["CIBlockPropertyEnum","свойство сортировка списка значений"],
 		"body": [
-			"\\$property_enums = \\\\CIBlockPropertyEnum::GetList(Array('VALUE'=>'ASC', 'SORT'=>'ASC'), Array('IBLOCK_ID'=>11, 'CODE'=>'PODVID'));",
+			"\\$rdbPropertyEnums = CIBlockPropertyEnum::GetList(",
+			"\t\t['VALUE'=>'ASC', 'SORT'=>'ASC'],",
+			"\t\t['IBLOCK_ID'=>$IBLOCK_ID, 'CODE'=>$CODE]",
+			"\t);",
             "\\$SORT = 10;",
-            "\\$ibpenum = new \\\\CIBlockPropertyEnum;",
-            "while (\\$dctProp = \\$property_enums->fetch()) {",
-            "    \\$dctProp['SORT'] = \\$SORT;",
-            "    \\$SORT = \\$SORT+10;",
-            "    \\$ibpenum->Update(\\$dctProp['ID'], \\$dctProp);",
+            "\\$ibPEnum = new CIBlockPropertyEnum;",
+            "while (\\$dctProp = \\$rdbPropertyEnums->fetch()) {",
+            "\t\\$dctProp['SORT'] = \\$SORT;",
+            "\t\\$SORT = \\$SORT+10;",
+            "\t\\$ibPEnum->Update(\\$dctProp['ID'], \\$dctProp);",
             "}"
 		],
         "description": "Сортирует значения свойства типа список"

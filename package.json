@@ -82,10 +82,6 @@
 			},
 			{
 				"language": "php",
-				"path": "./snippets/d7autload.json"
-			},
-			{
-				"language": "php",
 				"path": "./snippets/d7cache.json"
 			},
 			{
@@ -114,7 +110,7 @@
 			},
 			{
 				"language": "php",
-				"path": "./snippets/d7loader.json"
+				"path": "./snippets/d7main.json"
 			},
 			{
 				"language": "php",

@@ -1,13 +1,13 @@
 {
     "CModule.IncludeModule": {
-        "prefix": "cmoduleinclude",
+        "prefix": ["cmoduleinclude","load"],
         "body": [
             "CModule::IncludeModule('${1:moduleName}');"
         ],
         "description": "Проверяет установлен ли модуль и если установлен, то подключает его."
     },
     "CModule.AddAutoloadClasses": {
-        "prefix": "cmoduleaddautoload",
+        "prefix": ["cmoduleaddautoload","autoload"],
         "body": [
             "CModule::AddAutoloadClasses(",
             "\t'',",

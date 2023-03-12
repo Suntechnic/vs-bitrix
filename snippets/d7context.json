@@ -1,5 +1,5 @@
 {
-    "d7ContextResponseCookie": {
+    "Context.Response.Cookie": {
         "prefix": ["d7ContextResponseCookie","d7ResponseCookie","d7Cookie"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
@@ -15,7 +15,7 @@
         ],
         "description": ""
     },
-    "d7ContextRequestCookie": {
+    "Context.Request.Cookie": {
         "prefix": ["d7ContextRequestCookie","d7RequestCookie","d7Cookie"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
@@ -26,7 +26,7 @@
         ],
         "description": ""
     },
-    "d7ContextRequest": {
+    "Context.Request": {
         "prefix": ["d7ContextRequest","d7$_GET","d7$_POST"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
@@ -44,7 +44,7 @@
         ],
         "description": ""
     },
-    "d7ContextRequestUri": {
+    "Context.Reques.tUri": {
         "prefix": ["d7ContextRequestUri","d7RequestUri","d7Uri"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
@@ -61,7 +61,7 @@
         ],
         "description": "Возвращает текущую страницу (аналог \\$APPLICATION->GetCurPageParam())"
     },
-    "d7ContextRequestPage": {
+    "Context.Request.Page": {
         "prefix": ["d7ContextRequestPage","d7RequestPage","d7Page"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
@@ -75,7 +75,7 @@
         ],
         "description": "Возвращает текущую страницу без параметров (аналог \\$APPLICATION->GetCurPage())"
     },
-    "d7ContextRequestAjax": {
+    "Context.Request.Ajax": {
         "prefix": ["d7ContextRequestAjax","d7RequestAjax","d7Ajax"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
