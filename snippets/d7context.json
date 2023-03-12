@@ -2,22 +2,87 @@
     "d7ContextResponseCookie": {
         "prefix": ["d7ContextResponseCookie","d7ResponseCookie","d7Cookie"],
         "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
-            "\\$response = $context->getResponse();",
+            "\\$response = \\$context->getResponse();",
             "",
             "\\$cookie = new \\\\Bitrix\\\\Main\\\\Web\\\\Cookie('TEST', 42);",
-            "//$cookie->setDomain(SITE_SERVER_NAME);",
-            "\\$response->addCookie($cookie);"
+            "//\\$cookie->setDomain(SITE_SERVER_NAME);",
+            "\\$response->addCookie(\\$cookie);",
+            "",
+            "\\$context->getResponse()->flush('');"
         ],
         "description": ""
     },
-    "D7context": {
-        "prefix": "d7ContextRequestCookie",
+    "d7ContextRequestCookie": {
+        "prefix": ["d7ContextRequestCookie","d7RequestCookie","d7Cookie"],
         "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
             "\\$request = \\$context->getRequest();",
-            "$Test = $request->getCookie('TEST');"
+            "\\$Test = \\$request->getCookie('TEST');"
         ],
         "description": ""
+    },
+    "d7ContextRequest": {
+        "prefix": ["d7ContextRequest","d7$_GET","d7$_POST"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$request = \\$context->getRequest();",
+            "//Возвращает значение переменной запроса: (аналог переменной из $_REQUEST):",
+            "\\$IdElement = \\$request->get('ELEMENT_ID')",
+            "//Возвращает значение переменной запроса POST",
+            "//\\$request->getPost('ID');",
+            "//Возвращает значение переменной запроса GET ",
+            "//\\$request->getQuery('name');",
+            "//Возвращает отправленный файл (аналог переменной из $_FILES)",
+            "//\\$request->getFile('name');"
+        ],
+        "description": ""
+    },
+    "d7ContextRequestUri": {
+        "prefix": ["d7ContextRequestUri","d7RequestUri","d7Uri"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$request = \\$context->getRequest();",
+            "\\$Uri = \\$request->getRequestUri();",
+            "//Возвращает текущую страницу без параметров (аналог $APPLICATION->GetCurPage())",
+            "//\\$request->getRequestedPage()",
+            "//Проверяет, была ли страница запрошена методом аякс",
+            "//\\$request->isAjaxRequest()",
+            "//Проверяет, является ли текущая страница страницей административного раздела",
+            "//\\$request->isAdminSection()"
+        ],
+        "description": "Возвращает текущую страницу (аналог $APPLICATION->GetCurPageParam())"
+    },
+    "d7ContextRequestPage": {
+        "prefix": ["d7ContextRequestPage","d7RequestPage","d7Page"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$RequestedPage = \\$request->getRequestedPage()",
+            "//Проверяет, была ли страница запрошена методом аякс",
+            "//\\$request->isAjaxRequest()",
+            "//Проверяет, является ли текущая страница страницей административного раздела",
+            "//\\$request->isAdminSection()"
+        ],
+        "description": "Возвращает текущую страницу без параметров (аналог $APPLICATION->GetCurPage())"
+    },
+    "d7ContextRequestAjax": {
+        "prefix": ["d7ContextRequestAjax","d7RequestAjax","d7Ajax"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
+            "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
+            "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "//\\$request->isAjaxRequest()"
+        ],
+        "description": "Проверяет, была ли страница запрошена методом аякс"
     }
 }
