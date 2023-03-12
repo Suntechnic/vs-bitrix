@@ -4,12 +4,12 @@
         "body": [
             "\\$rsSect = new CIBlockSection;",
             "\\$arFields = array(",
-            "\t\"ACTIVE\"    => \"Y\",",
-            "\t\"IBLOCK_ID\" => \"${1:iblock_id}\",",
-            "\t\"NAME\"      => \"${2:name}\",",
+            "\t'ACTIVE'    => 'Y',",
+            "\t'IBLOCK_ID' => '${1:iblock_id}',",
+            "\t'NAME'      => '${2:name}',",
             ");",
             "if(!\\$id = \\$rsSect->Add(\\$arFields)) {",
-            "\techo \"Error:\" . \\$rsSect->LAST_ERROR;",
+            "\techo 'Error:' . \\$rsSect->LAST_ERROR;",
             "}"
         ],
         "description": "Добавляет в информационный блок новый раздел."
@@ -17,14 +17,14 @@
     "CIBlockSection.Delete": {
         "prefix": "CIBlockSectionDel",
         "body": [
-            "CIBlockSection::Delete(${1:\"SectionID\"});"
+            "CIBlockSection::Delete(${1:'SectionID'});"
         ],
         "description": "Удаляет раздел из информационного блока."
     },
     "CIBlockSection.GetByID": {
         "prefix": "CIBlockSectionID",
         "body": [
-            "\\$arSection = CIBlockSection::GetByID(${1:\"SectionID\"})->fetch();",
+            "\\$arSection = CIBlockSection::GetByID(${1:'SectionID'})->fetch();",
             "if(is_array(\\$arSection)) {",
             "\t${2://body ...}",
             "}"
@@ -35,13 +35,13 @@
         "prefix": "CIBlockSectionList",
         "body": [
             "\\$rsSection = CIBlockSection::GetList(",
-            "\t\\$arOrder  = array(\"SORT\" => \"ASC\"),",
+            "\t\\$arOrder  = array('SORT' => 'ASC'),",
             "\t\\$arFilter = array(",
-            "\t\t\"ACTIVE\"    => \"Y\",",
+            "\t\t'ACTIVE'    => 'Y',",
             "\t\t${1}",
             "\t),",
             "\tfalse,",
-            "\t\\$arSelect = array(\"ID\", \"NAME\", \"IBLOCK_ID\", \"CODE\", \"UF_*\"),",
+            "\t\\$arSelect = array('ID', 'NAME', 'IBLOCK_ID', 'CODE', 'UF_*'),",
             "\tfalse",
             ");",
             "while(\\$arSection = \\$rsSection->fetch()) {",
@@ -55,10 +55,10 @@
         "body": [
             "\\$rsSection = new CIBlockSection;",
             "\\$arFields = array(",
-            "\t\"ACTIVE\" => \"Y\",",
+            "\t'ACTIVE' => 'Y',",
             "\t${2://...}",
             ");",
-            "\\$rsIDSection = \\$rsSection->Update(${1:\"id\"}, \\$arFields);"
+            "\\$rsIDSection = \\$rsSection->Update(${1:'id'}, \\$arFields);"
         ],
         "description": "Изменяет параметры существующего раздела."
     }

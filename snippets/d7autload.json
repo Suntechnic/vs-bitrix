@@ -3,9 +3,9 @@
         "prefix": "d7autoload",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Loader::registerAutoLoadClasses(",
-            "\t\"\",",
+            "\t'',",
             "\tarray(",
-            "\t\t\"${1:classname}\" => \"${2:pathclass}\",",
+            "\t\t'${1:classname}' => '${2:pathclass}',",
             "\t\t//...",
             "\t)",
             ");"

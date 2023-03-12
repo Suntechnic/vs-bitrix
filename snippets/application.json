@@ -2,7 +2,7 @@
     "APPLICATION.ShowMeta": {
         "prefix": "APPLImeta",
         "body": [
-            "\\$APPLICATION->ShowMeta(\"${1:metaName}\");"
+            "\\$APPLICATION->ShowMeta('${1:metaName}');"
         ],
         "description": "Отображает свойство страницы в виде мета-тега."
     },
@@ -51,35 +51,35 @@
     "APPLICATION.ShowProperty": {
         "prefix": "APPLIproperty",
         "body": [
-            "\\$APPLICATION->ShowProperty(\"${1:property_id}\");"
+            "\\$APPLICATION->ShowProperty('${1:property_id}');"
         ],
         "description": "Отображает свойство страницы, учитывая свойства раздела."
     },
     "APPLICATION.GetTitle": {
         "prefix": "APPLIGetTitle",
         "body": [
-            "\\$APPLICATION->GetTitle(\"${1:property_name}\");"
+            "\\$APPLICATION->GetTitle('${1:property_name}');"
         ],
         "description": "Возвращает заголовок страницы."
     },
     "APPLICATION.GetCSS": {
         "prefix": "APPLIGetCSS",
         "body": [
-            "\\$APPLICATION->GetCSS(\"${1:external}\");"
+            "\\$APPLICATION->GetCSS('${1:external}');"
         ],
         "description": "Возвращает HTML для подключения CSS на странице."
     },
     "APPLICATION.GetNavChain": {
         "prefix": "APPLIGetNavChain",
         "body": [
-            "\\$APPLICATION->GetNavChain(\"${1:path}\");"
+            "\\$APPLICATION->GetNavChain('${1:path}');"
         ],
         "description": "Отображает HTML с навигационной цепочкой."
     },
     "APPLICATION.GetCurUri": {
         "prefix": "APPLIGetCurUri",
         "body": [
-            "\\$APPLICATION->GetCurUri(\"${1:add_params}\", \"${2:get_index_page}\")"
+            "\\$APPLICATION->GetCurUri('${1:add_params}', '${2:get_index_page}')"
         ],
         "description": "Возвращает адрес текущей страницы с параметрами."
     },
@@ -93,7 +93,7 @@
     "APPLICATION.GetCurPageParam": {
         "prefix": "APPLIGetCurPageParam",
         "body": [
-            "\\$APPLICATION->GetCurPageParam(\"${1:add_params}\", array(${2:remove_params}), ${3|true,false|});"
+            "\\$APPLICATION->GetCurPageParam('${1:add_params}', array(${2:remove_params}), ${3|true,false|});"
         ],
         "description": "Возвращает URL текущей страницы c добавленными новыми и(или) удаленными параметрами."
     },
@@ -107,21 +107,21 @@
     "APPLICATION.GetProperty": {
         "prefix": "APPLIGetProperty",
         "body": [
-            "\\$APPLICATION->GetProperty(\"${1:property_id}\")"
+            "\\$APPLICATION->GetProperty('${1:property_id}')"
         ],
         "description": "Возвращает свойство страницы, учитывая свойства раздела."
     },
     "APPLICATION.GetPageProperty": {
         "prefix": "APPLIGetPageProperty",
         "body": [
-            "\\$APPLICATION->GetPageProperty(\"${1:property_id}\")"
+            "\\$APPLICATION->GetPageProperty('${1:property_id}')"
         ],
         "description": "Возвращает свойство страницы."
     },
     "APPLICATION.GetDirProperty": {
         "prefix": "APPLIGetDirProperty",
         "body": [
-            "\\$APPLICATION->GetDirProperty(\"${1:property_id}\")"
+            "\\$APPLICATION->GetDirProperty('${1:property_id}')"
         ],
         "description": "Возвращает свойство раздела."
     },
@@ -142,14 +142,14 @@
     "APPLICATION.SetPageProperty": {
         "prefix": "APPLISetPageProperty",
         "body": [
-            "\\$APPLICATION->SetPageProperty(\"${1:property_id}\", \"${2:property_value}\");"
+            "\\$APPLICATION->SetPageProperty('${1:property_id}', '${2:property_value}');"
         ],
         "description": "Устанавливает свойство страницы."
     },
     "APPLICATION.SetDirProperty": {
         "prefix": "APPLISetDirProperty",
         "body": [
-            "\\$APPLICATION->SetDirProperty(\"${1:property_id}\", \"${2:property_value}\");"
+            "\\$APPLICATION->SetDirProperty('${1:property_id}', '${2:property_value}');"
         ],
         "description": "Устанавливает свойство раздела. Необязательный третий параметр позволяет получить свойства любого каталога."
     },
@@ -157,13 +157,13 @@
         "prefix": "APPLIMainInc",
         "body": [
             "\\$APPLICATION->IncludeComponent(",
-            "\t\"bitrix:main.include\",",
-            "\t\"\",",
+            "\t'bitrix:main.include',",
+            "\t'',",
             "\tArray(",
-            "\t\t\"AREA_FILE_SHOW\"    => \"${1|sect,page,file|}\",",
-            "\t\t\"AREA_FILE_SUFFIX\"  => \"inc\",",
-            "\t\t\"EDIT_TEMPLATE\"     => \"\",",
-            "\t\t\"PATH\"              => \"/include/${2:file.php}\"",
+            "\t\t'AREA_FILE_SHOW'    => '${1|sect,page,file|}',",
+            "\t\t'AREA_FILE_SUFFIX'  => 'inc',",
+            "\t\t'EDIT_TEMPLATE'     => '',",
+            "\t\t'PATH'              => '/include/${2:file.php}'",
             "\t)",
             ");",
             "$0"
@@ -174,12 +174,12 @@
         "prefix": "APPLIIncFile",
         "body": [
             "\\$APPLICATION->IncludeFile(",
-            "\t\"${1:file.php}\",",
+            "\t'${1:file.php}',",
             "\tArray(),",
             "\tArray(",
-            "\t\t\"MODE\"      => \"${2|html,text,php|}\",", 
-            "\t\t\"NAME\"      => \"${3:name}\",",
-            "\t\t\"TEMPLATE\"  => \"page_inc.php\"",
+            "\t\t'MODE'      => '${2|html,text,php|}',", 
+            "\t\t'NAME'      => '${3:name}',",
+            "\t\t'TEMPLATE'  => 'page_inc.php'",
             "\t)",
             ");"
         ],

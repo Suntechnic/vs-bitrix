@@ -2,7 +2,7 @@
     "D7LangSingle": {
         "prefix": "D7LangSingle",
         "body": [
-            "\\Bitrix\\Main\\Localization\\Loc::getMessage(\"${1:VARIABLE}\")"
+            "\\Bitrix\\Main\\Localization\\Loc::getMessage('${1:VARIABLE}')"
         ],
         "description": "Метод возвращает по коду соответствующее сообщение на текущем языке."
     },
@@ -25,7 +25,7 @@
     "D7Lang": {
         "prefix": "D7Lang",
         "body": [
-            "Loc::getMessage(\"${1:VARIABLE}\")"
+            "Loc::getMessage('${1:VARIABLE}')"
         ],
         "description": "Метод возвращает по коду соответствующее сообщение на текущем языке. Использовать с use."
     }
