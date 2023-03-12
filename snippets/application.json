@@ -159,12 +159,12 @@
             "\\$APPLICATION->IncludeComponent(",
             "\t'bitrix:main.include',",
             "\t'',",
-            "\tArray(",
+            "\t[",
             "\t\t'AREA_FILE_SHOW'    => '${1|sect,page,file|}',",
             "\t\t'AREA_FILE_SUFFIX'  => 'inc',",
             "\t\t'EDIT_TEMPLATE'     => '',",
             "\t\t'PATH'              => '/include/${2:file.php}'",
-            "\t)",
+            "\t]",
             ");",
             "$0"
         ],
@@ -175,12 +175,12 @@
         "body": [
             "\\$APPLICATION->IncludeFile(",
             "\t'${1:file.php}',",
-            "\tArray(),",
-            "\tArray(",
+            "\t[],",
+            "\t[",
             "\t\t'MODE'      => '${2|html,text,php|}',", 
             "\t\t'NAME'      => '${3:name}',",
             "\t\t'TEMPLATE'  => 'page_inc.php'",
-            "\t)",
+            "\t]",
             ");"
         ],
         "description": "Подключение файла."

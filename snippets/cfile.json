@@ -3,7 +3,7 @@
         "scope": "php",
         "prefix": "CFileDelete",
         "body": [
-            "CFile::Delete('${1:fileID}');"
+            "\\\\CFile::Delete('${1:fileID}');"
         ],
         "description": "Метод удаляет файл из таблицы зарегистрированных файлов (b_file) и с диска."
     },
@@ -12,14 +12,14 @@
         "scope": "php",
         "prefix": "CFileGetPath",
         "body": [
-            "CFile::GetPath('${1:fileID}');"
+            "\\\\CFile::GetPath('${1:fileID}');"
         ],
         "description": "Метод возвращает путь от корня сайта к зарегистрированному файлу. Возвращает NULL, если файл не зарегистрирован."
     },
     "CFile.ResizeImageGet": {
         "prefix": "CFileResizeImageGet",
         "body": [
-            "CFile::ResizeImageGet(${1:mixed_file}, array('width'=>${2:width}, 'height'=>${3:height}), ${4|BX_RESIZE_IMAGE_EXACT,BX_RESIZE_IMAGE_PROPORTIONAL,BX_RESIZE_IMAGE_PROPORTIONAL_ALT|}, ${5|true,false|});"
+            "\\\\CFile::ResizeImageGet(${1:mixed_file}, array('width'=>${2:width}, 'height'=>${3:height}), ${4|BX_RESIZE_IMAGE_EXACT,BX_RESIZE_IMAGE_PROPORTIONAL,BX_RESIZE_IMAGE_PROPORTIONAL_ALT|}, ${5|true,false|});"
         ],
         "description": "Подключение уменьшенного изображения."
     }
