@@ -1,13 +1,13 @@
 {
-	"name": "bitrix-snippet",
-	"displayName": "Bitrix Snippet",
+	"name": "bitrix",
+	"displayName": "Bitrix",
 	"description": "",
 	"version": "0.4.2",
-	"publisher": "Sumanai",
+	"publisher": "Suntechnic",
 	"icon": "images/bitrix_logo.png",
 	"bugs": {
-		"url": "https://github.com/Sumanai/bitrix-snippet/issues",
-		"email": "sumanai@ya.ru"
+		"url": "https://github.com/Suntechnic/vs-bitrix/issues",
+		"email": "madzhugin@gmail.com"
 	},
 	"engines": {
 		"vscode": "^1.28.0"
@@ -17,7 +17,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Sumanai/bitrix-snippet.git"
+		"url": "https://github.com/Suntechnic/vs-bitrix.git"
 	},
 	"contributes": {
 		"snippets": [{

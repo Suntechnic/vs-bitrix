@@ -3,14 +3,14 @@
         "scope": "php",
         "prefix": "user",
         "body": [
-            "if (\\$GLOBALS[\"USER\"]->IsAdmin()) {echo \"<pre>\";var_dump(${TM_SELECTED_TEXT:${CLIPBOARD:${1:\\$arResult}}});echo \"</pre>\";}"
+            "if (\\$GLOBALS['USER']->IsAdmin()) {echo '<pre>';var_dump(${TM_SELECTED_TEXT:${CLIPBOARD:${1:\\$arResult}}});echo '</pre>';}"
         ],
         "description": "Принт переменной только для админа."
     },
     "Bitrix.FileHeader": {
         "prefix": "bxHead",
         "body": [
-            "if(!defined(\"B_PROLOG_INCLUDED\") || B_PROLOG_INCLUDED!==true)die();",
+            "if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true)die();",
             "$0"
         ],
         "description": "Стандартный заголовок файла."
@@ -18,7 +18,7 @@
     "Bitrix.Prolog": {
         "prefix": "bxProlog",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/header.php\");",
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');",
             "$0"
         ],
         "description": "Подключение пролога."
@@ -26,7 +26,7 @@
     "Bitrix.PrologBefore": {
         "prefix": "bxPrologBefore",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/modules/main/include/prolog_before.php\");",
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');",
             "$0"
         ],
         "description": "Подключение служебной части пролога."
@@ -34,7 +34,7 @@
     "Bitrix.PrologAfter": {
         "prefix": "bxPrologAfter",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/modules/main/include/prolog_after.php\");",
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_after.php');",
             "$0"
         ],
         "description": "Подключение визуальной части пролога."
@@ -42,14 +42,14 @@
     "Bitrix.Epilog": {
         "prefix": "bxEpilog",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/footer.php\");"
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');"
         ],
         "description": "Подключение эпилога."
     },
     "Bitrix.EpilogBefore": {
         "prefix": "bxEpilogBefore",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/modules/main/include/epilog_before.php\");",
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_before.php');",
             "$0"
         ],
         "description": "Подключение визуальной части эпилога."
@@ -57,7 +57,7 @@
     "Bitrix.EpilogAfter": {
         "prefix": "bxEpilogAfter",
         "body": [
-            "require(\\$_SERVER[\"DOCUMENT_ROOT\"].\"/bitrix/modules/main/include/epilog_after.php\");"
+            "require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_after.php');"
         ],
         "description": "Подключение служебной части эпилога."
     },
@@ -112,15 +112,15 @@
     "Bitrix.bxComponentParameters": {
         "prefix": "bxComponentParameters",
         "body": [
-            "\\$arTemplateParameters[\"${1:PARAMETER_NAME}\"] = array(",
-            "\t\"PARENT\" => \"${2|BASE,DATA_SOURCE,VISUAL,USER_CONSENT,URL_TEMPLATES,SEF_MODE,AJAX_SETTINGS,CACHE_SETTINGS,ADDITIONAL_SETTINGS|}\",",
-            "\t\"NAME\" => ${3:GetMessage(\"${1:PARAMETER_NAME}\")},",
-            "\t\"TYPE\" => \"${4|STRING,CHECKBOX,LIST,FILE,COLORPICKER,CUSTOM|}\",",
-            "\t\"DEFAULT\" => \"${5:DEFAULT_VALUE}\",",
-            "\t\"REFRESH\" => \"${6|N,Y|}\",",
-            "\t\"MULTIPLE\" => \"${7|N,Y|}\",",
-            "\t\"ADDITIONAL_VALUES\" => \"${8|N,Y|}\",",
-            "\t\"COLS\" => \"${9:25}\",",
+            "\\$arTemplateParameters['${1:PARAMETER_NAME}'] = array(",
+            "\t'PARENT' => '${2|BASE,DATA_SOURCE,VISUAL,USER_CONSENT,URL_TEMPLATES,SEF_MODE,AJAX_SETTINGS,CACHE_SETTINGS,ADDITIONAL_SETTINGS|}',",
+            "\t'NAME' => ${3:GetMessage('${1:PARAMETER_NAME}')},",
+            "\t'TYPE' => '${4|STRING,CHECKBOX,LIST,FILE,COLORPICKER,CUSTOM|}',",
+            "\t'DEFAULT' => '${5:DEFAULT_VALUE}',",
+            "\t'REFRESH' => '${6|N,Y|}',",
+            "\t'MULTIPLE' => '${7|N,Y|}',",
+            "\t'ADDITIONAL_VALUES' => '${8|N,Y|}',",
+            "\t'COLS' => '${9:25}',",
             ");",
             "$0"
         ],

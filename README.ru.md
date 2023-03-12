@@ -22,7 +22,7 @@
 1. Запустите редактор
 1. Откройте командную строку сочетанием клавиш `Ctrl`-`Shift`-`P` (Windows, Linux) или `Cmd`-`Shift`-`P` (OSX)
 1. Выберите (или наберите) `Install Extension`
-1. Введите Bitrix Snippet
+1. Введите Bitrix
 1. Перезапустите Visual Studio Code
 
 ### TODO
