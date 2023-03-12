@@ -33,13 +33,13 @@
             "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
             "\\$request = \\$context->getRequest();",
-            "//Возвращает значение переменной запроса: (аналог переменной из $_REQUEST):",
+            "//Возвращает значение переменной запроса: (аналог переменной из \\$_REQUEST):",
             "\\$IdElement = \\$request->get('ELEMENT_ID')",
             "//Возвращает значение переменной запроса POST",
             "//\\$request->getPost('ID');",
             "//Возвращает значение переменной запроса GET ",
             "//\\$request->getQuery('name');",
-            "//Возвращает отправленный файл (аналог переменной из $_FILES)",
+            "//Возвращает отправленный файл (аналог переменной из \\$_FILES)",
             "//\\$request->getFile('name');"
         ],
         "description": ""
@@ -52,14 +52,14 @@
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
             "\\$request = \\$context->getRequest();",
             "\\$Uri = \\$request->getRequestUri();",
-            "//Возвращает текущую страницу без параметров (аналог $APPLICATION->GetCurPage())",
+            "//Возвращает текущую страницу без параметров (аналог \\$APPLICATION->GetCurPage())",
             "//\\$request->getRequestedPage()",
             "//Проверяет, была ли страница запрошена методом аякс",
             "//\\$request->isAjaxRequest()",
             "//Проверяет, является ли текущая страница страницей административного раздела",
             "//\\$request->isAdminSection()"
         ],
-        "description": "Возвращает текущую страницу (аналог $APPLICATION->GetCurPageParam())"
+        "description": "Возвращает текущую страницу (аналог \\$APPLICATION->GetCurPageParam())"
     },
     "d7ContextRequestPage": {
         "prefix": ["d7ContextRequestPage","d7RequestPage","d7Page"],
@@ -73,7 +73,7 @@
             "//Проверяет, является ли текущая страница страницей административного раздела",
             "//\\$request->isAdminSection()"
         ],
-        "description": "Возвращает текущую страницу без параметров (аналог $APPLICATION->GetCurPage())"
+        "description": "Возвращает текущую страницу без параметров (аналог \\$APPLICATION->GetCurPage())"
     },
     "d7ContextRequestAjax": {
         "prefix": ["d7ContextRequestAjax","d7RequestAjax","d7Ajax"],
