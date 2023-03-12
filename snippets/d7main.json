@@ -68,7 +68,7 @@
             "\\$directory = new \\\\Bitrix\\\\Main\\\\IO\\\\Directory($Path);",
             "foreach (\\$directory->getChildren() as \\$subDir) {",
             "\tif (\\$subDir->isDirectory()) {",
-            "\t\tforeach (\\$subDir->getChildren() as $file) {",
+            "\t\tforeach (\\$subDir->getChildren() as \\$file) {",
             "\t\t\tif (\\$file->IsExists() && !\\$file->isDirectory()) {",
             "\t\t\t\t",
             "\t\t\t}",
