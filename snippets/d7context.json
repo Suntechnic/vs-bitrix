@@ -44,7 +44,7 @@
         ],
         "description": ""
     },
-    "Context.Reques.tUri": {
+    "Context.Reques.Uri": {
         "prefix": ["d7ContextRequestUri","d7RequestUri","d7Uri"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",

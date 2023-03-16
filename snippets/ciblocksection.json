@@ -2,14 +2,14 @@
     "CIBlockSection.Add": {
         "prefix": "CIBlockSectionAdd",
         "body": [
-            "\\$rsSect = new CIBlockSection;",
+            "\\$rsSection = new CIBlockSection;",
             "\\$dctFields = array(",
             "\t'ACTIVE'    => 'Y',",
             "\t'IBLOCK_ID' => '${1:iblock_id}',",
             "\t'NAME'      => '${2:name}',",
             ");",
-            "if(!\\$id = \\$rsSect->Add(\\$dctFields)) {",
-            "\techo 'Error:' . \\$rsSect->LAST_ERROR;",
+            "if(!\\$id = \\$rsSection->Add(\\$dctFields)) {",
+            "\techo 'Error:' . \\$rsSection->LAST_ERROR;",
             "}"
         ],
         "description": "Добавляет в информационный блок новый раздел."
@@ -34,17 +34,17 @@
     "CIBlockSection.GetList": {
         "prefix": "CIBlockSectionList",
         "body": [
-            "\\$rsSection = \\\\CIBlockSection::GetList(",
-            "\t\\$arOrder  = array('SORT' => 'ASC'),",
-            "\t\\$arFilter = array(",
+            "\\$rdbSection = \\\\CIBlockSection::GetList(",
+            "\t\\$arOrder  = ['SORT' => 'ASC'],",
+            "\t\\$arFilter = [",
             "\t\t'ACTIVE'    => 'Y',",
             "\t\t${1}",
-            "\t),",
+            "\t],",
             "\tfalse,",
-            "\t\\$arSelect = array('ID', 'NAME', 'IBLOCK_ID', 'CODE', 'UF_*'),",
+            "\t\\$arSelect = ['ID', 'NAME', 'IBLOCK_ID', 'CODE', 'UF_*'],",
             "\tfalse",
             ");",
-            "while(\\$dctSection = \\$rsSection->fetch()) {",
+            "while(\\$dctSection = \\$rdbSection->fetch()) {",
             "\tvar_export(\\$dctSection);",
             "}"
         ],
