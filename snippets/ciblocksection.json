@@ -1,6 +1,6 @@
 {
     "CIBlockSection.Add": {
-        "prefix": "CIBlockSectionAdd",
+        "prefix": ["CIBlockSectionAdd","AddSection"],
         "body": [
             "\\$rsSection = new CIBlockSection;",
             "\\$dctFields = array(",
@@ -15,7 +15,7 @@
         "description": "Добавляет в информационный блок новый раздел."
     },
     "CIBlockSection.Delete": {
-        "prefix": "CIBlockSectionDel",
+        "prefix": ["CIBlockSectionDel","DeleteSection"],
         "body": [
             "\\\\CIBlockSection::Delete(${1:'SectionID'});"
         ],
@@ -32,8 +32,9 @@
         "description": "Возвращает параметры раздела по его коду ID."
     },
     "CIBlockSection.GetList": {
-        "prefix": "CIBlockSectionList",
+        "prefix": ["CIBlockSectionList","GetListSection"],
         "body": [
+            "//https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblocksection/getlist.php",
             "\\$rdbSection = \\\\CIBlockSection::GetList(",
             "\t\\$arOrder  = ['SORT' => 'ASC'],",
             "\t\\$arFilter = [",
@@ -45,7 +46,7 @@
             "\tfalse",
             ");",
             "while(\\$dctSection = \\$rdbSection->fetch()) {",
-            "\tvar_export(\\$dctSection);",
+            "\t\\$lstSections[] = \\$dctSection;",
             "}"
         ],
         "description": "Возвращает список разделов по фильтру."

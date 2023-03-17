@@ -2,7 +2,7 @@
 	"name": "bitrix",
 	"displayName": "Bitrix",
 	"description": "",
-	"version": "0.4.2",
+	"version": "0.0.2",
 	"publisher": "Suntechnic",
 	"icon": "images/bitrix_logo.png",
 	"bugs": {

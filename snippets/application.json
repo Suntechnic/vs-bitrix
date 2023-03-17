@@ -1,55 +1,55 @@
 {
     "APPLICATION.ShowMeta": {
-        "prefix": "APPLImeta",
+        "prefix": ["APPLImeta","ShowMeta"],
         "body": [
             "\\$APPLICATION->ShowMeta('${1:metaName}');"
         ],
         "description": "Отображает свойство страницы в виде мета-тега."
     },
     "APPLICATION.ShowTitle": {
-        "prefix": "APPLItitle",
+        "prefix": ["APPLItitle","ShowTitle"],
         "body": [
             "\\$APPLICATION->ShowTitle();"
         ],
         "description": "Отображает заголовок страницы."
     },
     "APPLICATION.ShowHead": {
-        "prefix": "APPLIhead",
+        "prefix": ["APPLIhead","ShowHead"],
         "body": [
             "\\$APPLICATION->ShowHead();"
         ],
         "description": "Метод предназначена для вывода в шаблоне сайта основных полей тега <head>."
     },
     "APPLICATION.ShowHeadStrings": {
-        "prefix": "APPLIheadStrings",
+        "prefix": ["APPLIheadStrings","ShowHeadStrings"],
         "body": [
             "\\$APPLICATION->ShowHeadStrings();"
         ],
         "description": "Отображает специальные стили, JavaScript либо произвольный html-код."
     },
     "APPLICATION.ShowPanel": {
-        "prefix": "APPLIpanel",
+        "prefix": ["APPLIpanel","ShowPanel"],
         "body": [
             "\\$APPLICATION->ShowPanel();"
         ],
         "description": "Отображает HTML представляющий из себя панель управления публичной частью."
     },
     "APPLICATION.ShowCSS": {
-        "prefix": "APPLIcss",
+        "prefix": ["APPLIcss","ShowCSS"],
         "body": [
             "\\$APPLICATION->ShowCSS();"
         ],
         "description": "Отображает HTML для подключения CSS на странице."
     },
     "APPLICATION.ShowNavChain": {
-        "prefix": "APPLInavChain",
+        "prefix": ["APPLInavChain","ShowNavChain"],
         "body": [
             "\\$APPLICATION->ShowNavChain();"
         ],
         "description": "Отображает HTML с навигационной цепочкой."
     },
     "APPLICATION.ShowProperty": {
-        "prefix": "APPLIproperty",
+        "prefix": ["APPLIproperty","ShowProperty"],
         "body": [
             "\\$APPLICATION->ShowProperty('${1:property_id}');"
         ],
@@ -154,7 +154,7 @@
         "description": "Устанавливает свойство раздела. Необязательный третий параметр позволяет получить свойства любого каталога."
     },
     "APPLICATION.main.include": {
-        "prefix": "APPLIMainInc",
+        "prefix": ["APPLIMainInc","include"],
         "body": [
             "\\$APPLICATION->IncludeComponent(",
             "\t'bitrix:main.include',",
@@ -171,7 +171,7 @@
         "description": "Подключение файла через компонент."
     },
     "APPLICATION.IncludeFile": {
-        "prefix": "APPLIIncFile",
+        "prefix": ["APPLIIncFile","IncludeFile"],
         "body": [
             "\\$APPLICATION->IncludeFile(",
             "\t'${1:file.php}',",

@@ -1,6 +1,6 @@
 {
     "CIBlockElement.Add": {
-        "prefix": "CIBlockElementAdd",
+        "prefix": ["CIBlockElementAdd","AddElement"],
         "body": [
             "\\$rsElement = new CIBlockElement;",
             "\\$arFields = array(",
@@ -17,7 +17,7 @@
         "description": "Добавляет новый элемент."
     },
     "CIBlockElement.Delete": {
-        "prefix": "CIBlockElementDel",
+        "prefix": ["CIBlockElementDel","DeleteElement"],
         "body": [
             "\\\\CIBlockElement::Delete('${1:ID}');"
         ],
@@ -34,7 +34,7 @@
         "description": "Возвращает элемент по его ID."
     },
     "CIBlockElement.GetList": {
-        "prefix": "CIBlockElementList",
+        "prefix": ["CIBlockElementList","GetListElements"],
         "body": [
             "//http://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getlist.php",
 			"/*",
@@ -99,7 +99,7 @@
         "description": "Возвращает список элементов по фильтру."
     },
     "CIBlockElement.Update": {
-        "prefix": "CIBlocElementUpdate",
+        "prefix": ["CIBlocElementUpdate","UpdateElement"],
         "body": [
             "\\$rsElement = new CIBlockElement;",
             "\\$arFields = array(",
