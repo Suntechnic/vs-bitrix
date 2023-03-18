@@ -1,14 +1,14 @@
 {
     "D7section": {
-        "prefix": "d7section",
+        "prefix": ["d7sectionList","d7sectionsList","d7getListSection"],
         "body": [
-            "\\$arSections = \\\\Bitrix\\\\Iblock\\\\SectionTable::getList(array(",
+            "\\$rdbSections = \\\\Bitrix\\\\Iblock\\\\SectionTable::getList(array(",
             "\t'select' => array('NAME'),",
             "\t'filter' => array('ID' => '${1:id}')",
             "));",
             "",
-            "while (\\$arSection = \\$arSections->fetch()) {",
-            "\tvar_export(\\$arSection);",
+            "while (\\$dctSection = \\$rdbSections->fetch()) {",
+            "\tvar_export(\\$dctSection);",
             "}"
         ],
         "description": ""

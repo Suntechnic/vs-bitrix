@@ -21,7 +21,7 @@
     "CIBlock.GetByID": {
         "prefix": "CIBlockID",
         "body": [
-            "\\$arBlock = CIBlock::GetByID('${1:iblockID}')->fetch();"
+            "\\$dctBlock = CIBlock::GetByID('${1:iblockID}')->fetch();"
         ],
         "description": "Возвращает информационный блок по его ID."
     },

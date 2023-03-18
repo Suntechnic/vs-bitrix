@@ -2,13 +2,13 @@
     "D7element": {
         "prefix": "d7element",
         "body": [
-            "\\$arElements = \\\\Bitrix\\\\Iblock\\\\ElementTable::getList(array(",
+            "\\$rdbElements = \\\\Bitrix\\\\Iblock\\\\ElementTable::getList(array(",
             "\t'select' => array('NAME'),",
             "\t'filter' => array('ID' => '${1:id}')",
             "));",
             "",
-            "while (\\$arElement = \\$arElements->fetch()) {",
-            "\tvar_export(\\$arElement);",
+            "while (\\$dctElement = \\$rdbElements->fetch()) {",
+            "\tvar_export(\\$dctElement);",
             "}"
         ],
         "description": ""

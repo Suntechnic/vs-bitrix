@@ -1,14 +1,14 @@
 {
     "D7Group.getList": {
-        "prefix": "d7grouplist",
+        "prefix": ["d7grouplist","d7getListGroup"],
         "body": [
-            "\\$arGroups = \\\\Bitrix\\\\Main\\\\GroupTable::getList(array(",
+            "\\$rdbGroups = \\\\Bitrix\\\\Main\\\\GroupTable::getList(array(",
             "\t'select' => array('NAME'),",
             "\t'filter' => array('ID' => '${1:id}')",
             "));",
             "",
-            "while (\\$arGroup = \\$arGroups->fetch()) {",
-            "\tvar_export(\\$arGroup);",
+            "while (\\$dctGroup = \\$rdbGroups->fetch()) {",
+            "\tvar_export(\\$dctGroup);",
             "}"
         ],
         "description": ""

@@ -3,11 +3,11 @@
         "prefix": "CIBlockPropAdd",
         "body": [
             "\\$ibp = new \\\\CIBlockProperty;",
-            "\\$arFields = [",
+            "\\$dctFields = [",
             "\t\t'ACTIVE'    => 'Y',",
             "\t\t'NAME'      => '${1:name}',",
             "\t];",
-            "if(!\\$Id = \\$ibp->Add(\\$arFields)) {",
+            "if(!\\$Id = \\$ibp->Add(\\$dctFields)) {",
             "\techo 'Error:' . \\$ibp->LAST_ERROR;",
             "}"
         ],
@@ -34,7 +34,7 @@
         "prefix": "CIBlockPropList",
         "body": [
             "\\$rdbProperties = CIBlockProperty::GetList(",
-            "\t\t\\$arOrder  = ['SORT' => 'ASC'],",
+            "\t\t\\$dctOrder  = ['SORT' => 'ASC'],",
             "\t\t\t\t'ACTIVE'    => 'Y',",
             "\t\t\t\t'IBLOCK_ID' => '${1:IBLOCK_ID}',",
             "\t\t\t]",

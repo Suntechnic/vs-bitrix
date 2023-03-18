@@ -1,12 +1,12 @@
 {
-	"name": "bitrix",
-	"displayName": "Bitrix",
+	"name": "bitrix-snippets",
+	"displayName": "Bitrix snippets",
 	"description": "",
 	"version": "0.0.2",
 	"publisher": "Suntechnic",
-	"icon": "images/bitrix_logo.png",
+	"icon": "images/bs_logo.png",
 	"bugs": {
-		"url": "https://github.com/Suntechnic/vs-bitrix/issues",
+		"url": "https://github.com/Suntechnic/vs-bitrix-snippets/issues",
 		"email": "madzhugin@gmail.com"
 	},
 	"engines": {
@@ -17,10 +17,11 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Suntechnic/vs-bitrix.git"
+		"url": "https://github.com/Suntechnic/vs-bitrix-snippets.git"
 	},
 	"contributes": {
-		"snippets": [{
+		"snippets": [
+			{
 				"language": "php",
 				"path": "./snippets/application.json"
 			},
@@ -128,27 +129,6 @@
 				"language": "php",
 				"path": "./snippets/other.json"
 			}
-		],
-		"keybindings": [{
-			"command": "editor.action.insertSnippet",
-			"key": "alt+s",
-			"mac": "alt+s",
-			"when": "editorHasSelection"
-		}],
-		"configuration": {
-			"type": "object",
-			"title": "Bitrix snippets configuration",
-			"properties": {
-				"bitrix-snippet.hint-function": {
-					"type": "boolean",
-					"default": false,
-					"description": "Подключать в рабочую область каталог с файлами-заглушками, содержащими описания стандартных функций."
-				}
-			}
-		}
-	},
-	"main": "./extension.js",
-	"activationEvents": [
-		"onLanguage:php"
-	]
+		]
+	}
 }

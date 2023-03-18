@@ -2,13 +2,13 @@
     "D7User": {
         "prefix": "d7user",
         "body": [
-            "\\$arUsers = \\\\Bitrix\\\\Main\\\\UserTable::getList(array(",
+            "\\$rdbUsers = \\\\Bitrix\\\\Main\\\\UserTable::getList(array(",
             "\t'select' => array('LOGIN'),",
             "\t'filter' => array('ID' => '${1:id}')",
             "));",
             "",
-            "while (\\$arUser = \\$arUsers->fetch()) {",
-            "\tvar_export(\\$arUser);",
+            "while (\\$dctUser = \\$rdbUsers->fetch()) {",
+            "\tvar_export(\\$dctUser);",
             "}"
         ],
         "description": ""
