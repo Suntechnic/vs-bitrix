@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.1] - 2023-03-19
+
+- Мелкие исправления / Fix bugs
+- Добавление метода AddChainItem / Adding AddChainItem
+
 ## [0.1.0] - 2023-03-18
 
 - Добавление сниппетов JS / Adding snippets for js

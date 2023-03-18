@@ -44,10 +44,39 @@
     "APPLICATION.ShowNavChain": {
         "prefix": ["APPLInavChain","ShowNavChain"],
         "body": [
+            "// https://dev.1c-bitrix.ru/api_help/main/reference/cmain/shownavchain.php",
             "\\$APPLICATION->ShowNavChain();"
         ],
         "description": "Отображает HTML с навигационной цепочкой."
     },
+    "APPLICATION.AddChainItem": {
+        "prefix": ["APPLIaddChainItem","AddChainItem"],
+        "body": [
+            "/*",
+            "https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addchainitem.php",
+            "Если значение третьего параметра - true, то в title будут произведены следующие замены:",
+            "&amp; заменяется на &",
+            "&quot; заменяется на \"",
+            "&#039; заменяется на '",
+            "&lt; заменяется на <",
+            "&gt; заменяется на >",
+            "",
+            "по умолчанию true",
+            "*/",
+            "$APPLICATION->AddChainItem('${1:Имя}', '${2:Ссылка}', true);",
+        ],
+        "description": "Добавляет пункт в навигационную цепочку"
+    },
+
+    "APPLICATION.GetNavChain": {
+        "prefix": "APPLIGetNavChain",
+        "body": [
+            "// https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblocksection/getnavchain.php",
+            "\\$APPLICATION->GetNavChain(false,${1:SECTION_ID});"
+        ],
+        "description": "Возвращает  путь по дереву от корня до раздела SECTION_ID."
+    },
+    
     "APPLICATION.ShowProperty": {
         "prefix": ["APPLIproperty","ShowProperty"],
         "body": [
@@ -68,13 +97,6 @@
             "\\$APPLICATION->GetCSS('${1:external}');"
         ],
         "description": "Возвращает HTML для подключения CSS на странице."
-    },
-    "APPLICATION.GetNavChain": {
-        "prefix": "APPLIGetNavChain",
-        "body": [
-            "\\$APPLICATION->GetNavChain('${1:path}');"
-        ],
-        "description": "Отображает HTML с навигационной цепочкой."
     },
     "APPLICATION.GetCurUri": {
         "prefix": "APPLIGetCurUri",
