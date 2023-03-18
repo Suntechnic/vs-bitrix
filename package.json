@@ -22,6 +22,10 @@
 	"contributes": {
 		"snippets": [
 			{
+				"language": "javascript",
+				"path": "./snippets/js.json"
+			},
+			{
 				"language": "php",
 				"path": "./snippets/application.json"
 			},

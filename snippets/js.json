@@ -1,0 +1,77 @@
+{
+    "BX.addCustomEvent": {
+        "scope": "javascript",
+        "prefix": ["bxCustomEvent","bxAddCustomEvent","собыите"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/kernel/castom_events/bx_addcustomevent.php",
+			"BX.addCustomEvent('app.vue.loader:initVue' , ()=>{'${1:code}'}); //BX.onCustomEvent('app.vue.loader:initVue');"
+        ],
+        "description": "Назначает обработчик кастомному событию"
+    },
+	"BX.onCustomEvent": {
+        "scope": "javascript",
+        "prefix": ["bxCustomEvent","bxOnCustomEvent","собыите"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/kernel/castom_events/bx_oncustomevent.php",
+			"BX.onCustomEvent('app.vue.loader:initVue'); // BX.addCustomEvent('app.vue.loader:initVue' , ()=>{/*ваш код*/});"
+        ],
+        "description": "Вызывает все обработчики кастомного события"
+    },
+	"BX.ready": {
+        "scope": "javascript",
+        "prefix": ["bxReady","onload"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/kernel/events/bx_ready.php",
+			"window.addEventListener('load', ()=>{",
+			"    BX.ready(() => {",
+			"            '${1:code}'",
+			"        });",
+			"});"
+        ],
+        "description": "Добавляет обработчик события все ресурсы загружены и DOM структура доступна для записи"
+    },
+    "BX.ajax.runAction": {
+        "scope": "javascript",
+        "prefix": ["bxAjaxRunAction","runAjax"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/ajax/bx_ajax_runaction.php",
+			"BX.ajax.runAction('vendoe:module.api.class.method', {",
+			"        method: 'POST',",
+			"        data: { // объект данны:  {Object|FormData}",
+			"            folderId: 1 ",
+			"        },",
+			"        analyticsLabel: {",
+			"            viewMode: 'grid',",
+			"            filterState: 'closed'\\t",
+			"        }",
+			"    }).then(",
+			"        function (response)",
+			"        {",
+			"            console.log(response);",
+			"            /**",
+			"            {",
+			"                'status': 'success', ",
+			"                'data': {",
+			"                    'ID': 1,",
+			"                    ...",
+			"                }, ",
+			"                'errors': []",
+			"            }",
+			"            **/\\t\\t\\t",
+			"        }, ",
+			"        function (response)",
+			"        {",
+			"            //сюда будут приходить все ответы, у которых status !== 'success'",
+			"            console.log(response);",
+			"            /**",
+			"            {",
+			"                'status': 'error', ",
+			"                'errors': [...]",
+			"            }",
+			"            **/\\t\\t\\t\\t",
+			"        }",
+			"    );"
+        ],
+        "description": "Метод для запуска аякс-действий в модуле"
+    }
+}
