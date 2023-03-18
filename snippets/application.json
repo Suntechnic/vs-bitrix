@@ -63,7 +63,7 @@
             "",
             "по умолчанию true",
             "*/",
-            "$APPLICATION->AddChainItem('${1:Имя}', '${2:Ссылка}', true);",
+            "\\$APPLICATION->AddChainItem('${1:Имя}', '${2:Ссылка}', true);",
         ],
         "description": "Добавляет пункт в навигационную цепочку"
     },
