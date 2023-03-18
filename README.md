@@ -3,7 +3,7 @@
 
 Сниппеты Bitrix для VS Code Editor
 
-Расширение устанавливается глобально и не требует установки рабочую область.
+Расширение устанавливается глобально и не требует установки выы рабочую область.
 
 ![Использование](images/sample.gif)
 *в примере испоьзована тема [Green Paper](https://marketplace.visualstudio.com/items?itemName=Suntechnic.green-papper)*
