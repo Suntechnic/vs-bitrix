@@ -4,7 +4,7 @@
         "prefix": ["bxCustomEvent","bxAddCustomEvent","собыите"],
         "body": [
 			"// https://dev.1c-bitrix.ru/api_help/js_lib/kernel/castom_events/bx_addcustomevent.php",
-			"BX.addCustomEvent('app.vue.loader:initVue' , ()=>{'${1:code}'}); //BX.onCustomEvent('app.vue.loader:initVue');"
+			"BX.addCustomEvent('app.vue.loader:initVue' , ()=>{${1:code}}); //BX.onCustomEvent('app.vue.loader:initVue');"
         ],
         "description": "Назначает обработчик кастомному событию"
     },
@@ -24,7 +24,7 @@
 			"// https://dev.1c-bitrix.ru/api_help/js_lib/kernel/events/bx_ready.php",
 			"window.addEventListener('load', ()=>{",
 			"    BX.ready(() => {",
-			"            '${1:code}'",
+			"            ${1:code}",
 			"        });",
 			"});"
         ],
@@ -42,7 +42,7 @@
 			"        },",
 			"        analyticsLabel: {",
 			"            viewMode: 'grid',",
-			"            filterState: 'closed'\\t",
+			"            filterState: 'closed'",
 			"        }",
 			"    }).then(",
 			"        function (response)",
@@ -57,7 +57,7 @@
 			"                }, ",
 			"                'errors': []",
 			"            }",
-			"            **/\\t\\t\\t",
+			"            **/",
 			"        }, ",
 			"        function (response)",
 			"        {",
@@ -68,7 +68,7 @@
 			"                'status': 'error', ",
 			"                'errors': [...]",
 			"            }",
-			"            **/\\t\\t\\t\\t",
+			"            **/",
 			"        }",
 			"    );"
         ],
