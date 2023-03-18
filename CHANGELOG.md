@@ -1,10 +1,11 @@
 # Change Log
 
-## [0.0.2] - 2018-10-23
+## [0.0.2] - 2023-03-18
 
-- Multishortcuts (prefixes)  have been added / Добавлены множественные шорткаты (префиксы)
+- Добавлены множественные шорткаты (префиксы) / Multishortcuts (prefixes)  have been added
+- Мелкие исправления / Fix bugs
 
-## [0.0.1] - 2018-10-22
+## [0.0.1] - 2023-03-17
 
-- Initial release / Первый релиз
-- Based on [bitrix-snippets](https://marketplace.visualstudio.com/items?itemName=sumanai.bitrix-snippet), thanks Sumanai / Базируется на [bitrix-snippets](https://marketplace.visualstudio.com/items?itemName=sumanai.bitrix-snippet), спасибо Sumanai
+- Первый релиз / Initial release
+- Базируется на [bitrix-snippets](https://marketplace.visualstudio.com/items?itemName=sumanai.bitrix-snippet), спасибо Sumanai / Based on [bitrix-snippets](https://marketplace.visualstudio.com/items?itemName=sumanai.bitrix-snippet), thanks Sumanai
