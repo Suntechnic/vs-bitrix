@@ -6,7 +6,7 @@
 Расширение устанавливается глобально и не требует установки выы рабочую область.
 
 ![Использование](images/sample.gif)
-*в примере испоьзована тема [Green Paper](https://marketplace.visualstudio.com/items?itemName=Suntechnic.green-papper)*
+*в примере использована тема [Green Paper](https://marketplace.visualstudio.com/items?itemName=Suntechnic.green-papper)*
 
 ## Использование
 
