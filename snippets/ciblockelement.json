@@ -1,5 +1,19 @@
 {
-    "CIBlockElement.Add": {
+    "CIBlockElement.GetElementGroups": {
+        "prefix": ["CIBlockElementGetElementGroups","CIBlockElementGroups","ElementSections","все разделы элемента"],
+        "body": [
+			"\\$rdbCurrentSections = \\\\CIBlockElement::GetElementGroups(",
+			"\t\t\\$ElementId,",
+			"\t\ttrue, // необходимость выборки привязок и из свойств типа 'Привязка к разделу'. true - не выбирать, по умолчанию false",
+			"\t\t['ID','IBLOCK_ID']",
+			"\t);",
+			"while(\\$dctSection = \\$rdbCurrentSections->Fetch()) {",
+			"\t\\$lstCurrentSectionsIDs[] = \\$dctSection['ID'];",
+			"}"
+        ],
+        "description": "Получить все разделы элемента к которому он привязан"
+    },
+	"CIBlockElement.Add": {
         "prefix": ["CIBlockElementAdd","AddElement"],
         "body": [
             "\\$rsElement = new CIBlockElement;",
