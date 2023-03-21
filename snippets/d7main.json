@@ -1,4 +1,14 @@
 {
+    "Main.Ui.Extension.load": {
+        "prefix": ["uiextensionload","uiextensionsload"],
+        "body": [
+            "\\\\Bitrix\\\\Main\\\\UI\\\\Extension::load([",
+            "\t\t'${1:extesioname}'",
+            "\t]);"
+        ],
+        "description": "Статический метод возвращает document root сервера."
+    },
+    
     "Main.Application.getDocumentRoot": {
         "prefix": ["d7documentroot","document_root","$_SERVER['DOCUMENT_ROOT']"],
         "body": [
