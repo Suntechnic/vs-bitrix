@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.1.2] - 2023-03-22
+
+- Добавление Main.Ui.Extension.load / New: Main.Ui.Extension.load
+
 ## [0.1.1] - 2023-03-19
 
 - Мелкие исправления / Fix bugs
