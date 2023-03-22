@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.3] - 2023-03-23
+
+- Обновление названия / Renaming
+- Добавление D7Elements.GetList / New: D7Elements.GetList
+- Форматирование D7ElementTable.GetList / Formatting: D7ElementTable.GetList
+- Обогащение префиксов / Enrichment of prefixes
+
 ## [0.1.2] - 2023-03-22
 
 - Добавление Main.Ui.Extension.load / New: Main.Ui.Extension.load

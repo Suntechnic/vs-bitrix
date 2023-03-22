@@ -62,7 +62,7 @@
         "description": "Подключение служебной части эпилога."
     },
     "Bitrix.TemplateGlobalVars": {
-        "prefix": "bxTemplateGlobalVars",
+        "prefix": ["bxTemplateGlobalVars","переменные шаблона"],
         "body": [
             "/** @var array \\$arParams */",
             "/** @var array \\$arResult */",
