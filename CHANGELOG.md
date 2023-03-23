@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.4] - 
+
+- Форматирование кода CFile / Formatting: CFile
+- Исправление ошибок форматирования D7Elements.GetList / Fixing formatting bugs: D7Elements.GetList
+
 ## [0.1.3] - 2023-03-23
 
 - Обновление названия / Renaming

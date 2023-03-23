@@ -1,10 +1,10 @@
 {
-    "D7ElementTable.GetList": {
+    "d7ElementTable.GetList": {
         "prefix": ["d7ElementTableGetList", "d7GetListElements","GetListElements"],
         "body": [
             "\\$rdbElements = \\\\Bitrix\\\\Iblock\\\\ElementTable::getList([",
             "\t\t'select' => ['NAME'],",
-            "\t\t'filter' => ['ID' => '${1:id}']",
+            "\t\t'filter' => ['ID' => ${1:\\$id}]",
             "\t]);",
             "",
             "while (\\$dctElement = \\$rdbElements->fetch()) {",
@@ -13,17 +13,17 @@
         ],
         "description": "Список элментов на d7"
     },
-    "D7Elements.GetList": {
+    "d7Elements.GetList": {
         "prefix": ["d7ElementGetList", "d7GetListElements","GetListElements"],
         "body": [
             "//https://mrcappuccino.ru/blog/post/iblock-elements-bitrix-d7",
-            "\\$ClassName = \\\\Bitrix\\\\Iblock\\\\Iblock::wakeUp(\\'${1:IBlockId}')->getEntityDataClass();",
+            "\\$ClassName = \\\\Bitrix\\\\Iblock\\\\Iblock::wakeUp(${1:\\$IBlockId})->getEntityDataClass();",
             "\\$lstElements = \\$ClassName::getList([",
             "\t\t'select' => ['ID', 'NAME', 'PROPERTY_URL_' => 'URL'],",
             "\t\t'filter' => ['=ACTIVE' => 'Y'],",
             "\t\t'cache' => ['ttl' => 3600]",
             "\t])->fetchAll();",
-            "foreach (\\$lstElements as $dctElement) {",
+            "foreach (\\$lstElements as \\$dctElement) {",
             "\tvar_export(\\$dctElement);//\\\\Kint::dump($dctElement);",
             "}"
         ],
