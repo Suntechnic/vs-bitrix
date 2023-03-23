@@ -1,5 +1,4 @@
-# Bitrix snippets
-
+# Bitrix snippets 2023
 
 Сниппеты Bitrix для VS Code Editor
 
