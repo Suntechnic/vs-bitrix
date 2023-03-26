@@ -1,0 +1,115 @@
+{
+    "d7Sale.Order.Load": {
+        "prefix": ["d7SaleOrderLoad","LoadOrder"],
+        "body": [
+            "\\$order = \\\\Bitrix\\\\Sale\\\\Order::load(\\$OrderId);"
+        ],
+        "description": "Загрузка заказа"
+    },
+    "d7Sale.Order.Load+": {
+        "prefix": ["d7SaleOrderLoad+","LoadOrder+"],
+        "body": [
+            "//https://mrcappuccino.ru/blog/post/work-with-order-bitrix-d7",
+            "\\$order = \\\\Bitrix\\\\Sale\\\\Order::load(\\$OrderId);",
+            "",
+            "\\$order->getId(); // ID заказа",
+            "\\$order->getDateInsert(); // время создания заказа",
+            "\\$order->getPersonTypeId(); // ID типа покупателя",
+            "\\$order->getUserId(); // ID пользователя",
+            "",
+            "\\$order->getPrice(); // Сумма заказа",
+            "\\$order->getDiscountPrice(); // Размер скидки",
+            "\\$order->getDeliveryPrice(); // Стоимость доставки",
+            "\\$order->getSumPaid(); // Оплаченная сумма",
+            "",
+            "\\$order->isPaid(); // true, если оплачен",
+            "\\$order->isAllowDelivery(); // true, если разрешена доставка",
+            "\\$order->isShipped(); // true, если отправлен",
+            "\\$order->isCanceled(); // true, если отменен",
+            "",
+            "\\$paymentIds = \\$order->getPaymentSystemId(); // id способов оплат",
+            "\\$deliveryIds = \\$order->getDeliverySystemId(); // id способов доставки",
+            "",
+            "\\$discount = \\$order->getDiscount(); // скикдки",
+            "\\$dctDiscount = \\$discount->getApplyResult();",
+            "",
+            "\\$propertyCollection = \\$order->getPropertyCollection(); // коллекция свойст заказа",
+            "",
+            "\\$order->getField('ORDER_WEIGHT'); // Вес заказа, так же можно почуить любое другое поле",
+            "",
+            "//\\$order->setField('USER_DESCRIPTION', 'Заказ в один клик'); // изменяем поле",
+            "//\\$order->save();"
+        ],
+        "description": "Загрузка заказа и получение его данных"
+    },
+    "d7Sale.Order.Basket": {
+        "prefix": ["d7SaleOrderGetBasket","BasketOrder","OrderBasket","корзина заказа"],
+        "body": [
+            "\\$basket = \\$order->getBasket();"
+        ],
+        "description": "Получение корзины заказа"
+    },
+    "d7Sale.Basket.Load": {
+        "prefix": ["d7SaleBasketLoadItemsForFUser","BasketUser","UserBasket","корзина пользователя"],
+        "body": [
+            "\\$basket = \\\\Bitrix\\\\Sale\\\\Basket::loadItemsForFUser(",
+            "\t\t\\\\Bitrix\\\\Sale\\\\Fuser::getId(),",
+            "\t\t\\\\Bitrix\\\\Main\\\\Context::getCurrent()->getSite()",
+            "\t);"
+        ],
+        "description": "Корзина текущего пользователя"
+    },
+    "d7Sale.Basket+": {
+        "prefix": ["d7SaleOrderBasket+","BasketOrder+","OrderBasket+","корзина заказа"],
+        "body": [
+            "//https://mrcappuccino.ru/blog/post/work-with-basket-bitrix-d7",
+            "\\$basket = \\$order->getBasket();",
+            "//\\$basket = \\\\Bitrix\\\\Sale\\\\Order::load(\\$OrderId)->getBasket();",
+            "",
+            "\\$price = \\$basket->getPrice(); // Цена с учетом скидок",
+            "\\$fullPrice = \\$basket->getBasePrice(); // Цена без учета скидок",
+            "\\$weight = \\$basket->getWeight(); // Общий вес корзины",
+            "",
+            "//\\$basket->getItemById(\\$ItemId)->delete(); // удаление элемента корзины по ID",
+            "//\\$basket->save();"
+        ],
+        "description": "Корзина заказа и некоторые операции над ней"
+    },
+    "d7Sale.BasketItem": {
+        "prefix": ["d7SaleBasketItems","BasketItems","элементы корзины","состав корзины"],
+        "body": [
+            "\\$items = \\$basket->getBasketItems();"
+        ],
+        "description": "Состав (элементы) корзины"
+    },
+    "d7Sale.BasketItem+": {
+        "prefix": ["d7SaleBasketItems+","BasketItems+","элементы корзины","состав корзины"],
+        "body": [
+            "//https://mrcappuccino.ru/blog/post/work-with-basket-bitrix-d7",
+            "\\$items = \\$basket->getBasketItems();",
+            "",
+            "foreach (\\$basket as $item) { // сама корзина так же является итерируемым объектом",
+            "\techo \\$item->getField('NAME').': '.\\$item->getQuantity().'<br />';",
+            "\t",
+            "\t\\$item->getId();         // ID записи в корзине",
+            "\t\\$item->getProductId();  // ID товара",
+            "\t\\$item->getPrice();      // Цена за единицу",
+            "\t\\$item->getQuantity();   // Количество",
+            "\t\\$item->getFinalPrice(); // Сумма",
+            "\t\\$item->getWeight();     // Вес",
+            "\t\\$item->getField('NAME');// Любое поле товара в корзине",
+            "\t\\$item->canBuy();        // true, если доступно для покупки",
+            "\t\\$item->isDelay();       // true, если отложено",
+            "\t",
+            "\t\\$item->getPropertyCollection(); // Свойства товара в корзине",
+            "\t",
+            "\t//\\$item->setField('QUANTITY', $quantity); // Изменение количества",
+            "\t//\\$item->save(); // после изменения товар нужно сохранить",
+            "\t",
+            "\t//\\$item->delete(); // Удаление",
+            "\t//\\$basket->save();",
+            "}"
+        ],
+        "description": "Состав (элементы) корзины и получения данных"
+    }
+}

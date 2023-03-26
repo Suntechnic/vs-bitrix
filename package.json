@@ -2,7 +2,7 @@
 	"name": "bitrix-snippets",
 	"displayName": "Bitrix snippets 2023",
 	"description": "",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"publisher": "Suntechnic",
 	"icon": "images/bs_logo.png",
 	"bugs": {
@@ -89,6 +89,10 @@
 				"language": "php",
 				"path": "./snippets/d7cache.json"
 			},
+            {
+				"language": "php",
+				"path": "./snippets/d7catalog.json"
+			},
 			{
 				"language": "php",
 				"path": "./snippets/d7config.json"
@@ -120,6 +124,10 @@
 			{
 				"language": "php",
 				"path": "./snippets/d7option.json"
+			},
+            {
+				"language": "php",
+				"path": "./snippets/d7sale.json"
 			},
 			{
 				"language": "php",

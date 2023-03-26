@@ -1,0 +1,31 @@
+{
+    "d7Catalog.GroupTable.getList": {
+        "prefix": ["d7CatalogGroupTableGetList","типы цен"],
+        "body": [
+            "//https://estrin.pw/bitrix-d7-snippets/s/catalog-group-prices/",
+            "\\$rdbGroups = \\\\Bitrix\\\\Catalog\\\\GroupTable::getList();",
+            "",
+            "while (\\$dctGroup = \\$rdbGroups->fetch()) {",
+            "\tvar_export(\\$dctGroup);",
+            "}"
+        ],
+        "description": ""
+    },
+    "d7Catalog.Pice.getList": {
+        "prefix": ["d7CatalogPiceGetList","d7PiceGetList","PiceGetList","GetPrices","Prices","цены"],
+        "body": [
+            "\\$rdbPrice = \\\\Bitrix\\\\Catalog\\\\Model\\\\Price::getList([",
+            "\t\t'order'=>['PRICE'=>'ASC'],",
+            "\t\t'filter'=>[",
+            "\t\t\t\t'CATALOG_GROUP_ID'=>array_column(\\$lstGroups,'ID'",
+            "\t\t\t\t'PRODUCT_ID'=>\\$ProductId",
+            "\t\t\t]",
+            "\t]);",
+            "\\$lstPrices = [];",
+            "while (\\$dctPrice = \\$rdbPrice->fetch()) {",
+            "\t\\$lstPrices[] = \\$dctPrice;",
+            "}",
+        ],
+        "description": ""
+    }
+}

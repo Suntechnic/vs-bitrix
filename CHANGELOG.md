@@ -1,11 +1,17 @@
 # Change Log
 
-## [0.1.4] - 
+## [0.2.0] - 2023-03-26
+
+- Дополнен README, добавлены благодарности / Added README with acknowledgments
+- Расширены некоторые префиксы / Expanded some prefixes
+- Добавлены группы снипетов связанных с ИМ: d7catalog и d7order / Added snippet groups related to e-commerce: d7catalog and d7order
+
+## [0.1.4] - 2023-03-23
 
 - Форматирование кода CFile / Formatting: CFile
 - Исправление ошибок форматирования D7Elements.GetList / Fixing formatting bugs: D7Elements.GetList
 
-## [0.1.3] - 2023-03-23
+## [0.1.3] - 2023-03-22
 
 - Обновление названия / Renaming
 - Добавление D7Elements.GetList / New: D7Elements.GetList

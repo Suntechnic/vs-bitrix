@@ -1,6 +1,6 @@
 {
-    "D7Option": {
-        "prefix": "d7option",
+    "d7Option": {
+        "prefix": ["d7Option","OptionGet","GetOption"],
         "body": [
             "\\$cookiePrefix = \\\\Bitrix\\\\Main\\\\Config\\\\Option::get('${1:module}', '${2:var}');"
         ],

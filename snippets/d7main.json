@@ -18,7 +18,7 @@
     },
     
     "Main.Loader.includeModule": {
-        "prefix": ["cmoduleinclude","d7load","d7includemodule"],
+        "prefix": ["CModuleInclude","d7LoadModule","d7IncludeModule","LoadModule","IncludeModule"],
         "body": [
             "\\\\Bitrix\\\\Main\\\\Loader::includeModule('${1:moduleName}');"
         ],
@@ -51,7 +51,7 @@
     },
 
     "Main.IO.File": {
-        "prefix": ["d7file","d7exists","d7iofile"],
+        "prefix": ["d7File","d7ExistsFile","d7IOFile","File","ExistsFile"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/io/file/index.php",
             "\\$file = new \\\\Bitrix\\\\Main\\\\IO\\\\File(\\\\Bitrix\\\\Main\\\\Application::getDocumentRoot().'/file.txt');",
