@@ -5,6 +5,8 @@
 - Дополнен README, добавлены благодарности / Added README with acknowledgments
 - Расширены некоторые префиксы / Expanded some prefixes
 - Добавлены группы снипетов связанных с ИМ: d7catalog и d7order / Added snippet groups related to e-commerce: d7catalog and d7order
+- Добавлен CIBlockElement.SetPropertyValuesEx / New: CIBlockElement.SetPropertyValuesEx
+- Добавлена группа снипетов исключений /  Added snippet group of exceptions
 
 ## [0.1.4] - 2023-03-23
 

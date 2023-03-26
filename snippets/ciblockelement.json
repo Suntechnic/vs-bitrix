@@ -16,7 +16,7 @@
 	"CIBlockElement.Add": {
         "prefix": ["CIBlockElementAdd","AddElement"],
         "body": [
-            "\\$rsElement = new CIBlockElement;",
+            "\\$rsElement = new \\\\CIBlockElement;",
             "\\$dctFields = array(",
             "\t'ACTIVE'            => 'Y',",
             "\t'NAME'              => '${1:name}',",
@@ -40,14 +40,14 @@
     "CIBlockElement.GetByID": {
         "prefix": "CIBlockElementID",
         "body": [
-            "\\$dctElement = CIBlockElement::GetByID('${1:ID}')->fetch();",
+            "\\$dctElement = \\\\CIBlockElement::GetByID('${1:ID}')->fetch();",
             "if(is_array(\\$dctElement)) {",
             "\t//body ...",
             "}"
         ],
         "description": "Возвращает элемент по его ID."
     },
-    "CIBlockElement.GetList": {
+    "CIBlockElement.GetList+": {
         "prefix": ["CIBlockElementList","GetListElements"],
         "body": [
             "//http://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getlist.php",
@@ -100,7 +100,7 @@
 			"\t array arSelectFields = [] - выбираемые поля и свойства.",
 			"\t );",
 			"*/",
-			"\\$rdb = CIBlockElement::GetList([], \\$dctFilter, false, false, \\$lstSelect)",
+			"\\$rdb = \\\\CIBlockElement::GetList([], \\$dctFilter, false, false, \\$lstSelect);",
 			"//while(\\$element = \\$rdb->GetNextElement()) {",
 			"//\t\\$dctElement = \\$element->GetFields();",
 			"//\t\\$lstElements[] = \\$dctElement;",
@@ -115,7 +115,7 @@
     "CIBlockElement.Update": {
         "prefix": ["CIBlocElementUpdate","UpdateElement"],
         "body": [
-            "\\$rsElement = new CIBlockElement;",
+            "\\$rsElement = new \\\\CIBlockElement;",
             "\\$dctFields = array(",
             "\t'ACTIVE'    => 'Y',",
             "\t//...",
@@ -123,5 +123,17 @@
             "\\$rsIDElement = \\$rsElement->Update(${1:'id'}, \\$dctFields);"
         ],
         "description": "Изменяет элемент."
+    },
+    "CIBlockElement.SetPropertyValuesEx": {
+        "prefix": ["CIBlockElementSetPropertyValuesEx","CIBlockElementUpdatePropertyValuesEx","ElementPropertySet","ElementPropertyUpdate"],
+        "body": [
+            "// https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/setpropertyvaluesex.php",
+            "\\\\CIBlockElement::SetPropertyValuesEx(",
+            "\t\t\\$ElementId, // Ид элемента",
+            "\t\tfalse, // Ид информационного блока (Может быть не указан.) ",
+            "\t\t[\\$PropCode => \\$Value] // Массив значений свойств ",
+            "\t);"
+        ],
+        "description": "Изменяет значение свойства элемента"
     }
 }

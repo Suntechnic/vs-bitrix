@@ -109,6 +109,10 @@
 				"language": "php",
 				"path": "./snippets/d7element.json"
 			},
+            {
+				"language": "php",
+				"path": "./snippets/d7exceptions.json"
+			},
 			{
 				"language": "php",
 				"path": "./snippets/d7group.json"

@@ -1,0 +1,37 @@
+{
+    "SystemException": {
+        "prefix": ["d7SystemException","SystemException","throwSystemException","исключение"],
+        "body": [
+			"throw new \\\\Bitrix\\\\Main\\\\ObjectNotFoundException('${1:текст ошибки}');"
+        ],
+        "description": "базовый класс всех системных исключений"
+    },
+    "IoException": {
+        "prefix": ["IoException","throwIoException","исключение ввода-вывода"],
+        "body": [
+			"throw new \\\\Bitrix\\\\Main\\\\IO\\\\IoException('${1:текст ошибки}');"
+        ],
+        "description": "базовый класс всех исключений файлового ввода-вывода"
+    },
+    "IoException+": {
+        "prefix": ["d7IoException","IoException","throwIoException","исключение ввода-вывода"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&LESSON_ID=2803",
+            "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/io/ioexception/index.php",
+			"throw new \\\\Bitrix\\\\Main\\\\IO\\\\IoException('${1:текст ошибки}');",
+            "throw new \\\\Bitrix\\\\Main\\\\IO\\\\FileDeleteException('${1:ошибка удаления файла}');",
+            "throw new \\\\Bitrix\\\\Main\\\\IO\\\\FileNotFoundException('${1:файл не найден}');",
+            "throw new \\\\Bitrix\\\\Main\\\\IO\\\\FileOpenException('${1:ошибка открытия файла}');",
+            "throw new \\\\Bitrix\\\\Main\\\\IO\\\\InvalidPathException('${1:неправильный путь}');",
+            "throw new \\\\Bitrix\\\\Main\\\\IO\\\\FileNotOpenedException('${1:файл не открыт}');"
+        ],
+        "description": "классы исключений файлового ввода-вывода"
+    },
+    "ObjectNotFoundException": {
+        "prefix": ["d7ObjectNotFoundException","throwObjectNotFoundException"],
+        "body": [
+			"throw new \\\\Bitrix\\\\Main\\\\ObjectNotFoundException ('${1:объект не существует}');"
+        ],
+        "description": "базовый класс всех исключений файлового ввода-вывода"
+    }
+}

@@ -35,7 +35,7 @@
         "prefix": ["bxAjaxRunAction","runAjax"],
         "body": [
 			"// https://dev.1c-bitrix.ru/api_help/js_lib/ajax/bx_ajax_runaction.php",
-			"BX.ajax.runAction('vendoe:module.api.class.method', {",
+			"BX.ajax.runAction('vendor:module.api.class.method', {",
 			"        method: 'POST',",
 			"        data: { // объект данны:  {Object|FormData}",
 			"            folderId: 1 ",
