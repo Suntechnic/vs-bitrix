@@ -24,7 +24,7 @@
             "\\$lstPrices = [];",
             "while (\\$dctPrice = \\$rdbPrice->fetch()) {",
             "\t\\$lstPrices[] = \\$dctPrice;",
-            "}",
+            "}"
         ],
         "description": ""
     }
