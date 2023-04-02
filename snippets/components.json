@@ -1,0 +1,27 @@
+{
+    "Components.bitrix:menu": {
+        "prefix": ["bitrix:menu","load"],
+        "body": [
+            "<?$APPLICATION->IncludeComponent(",
+            "    'bitrix:menu',",
+            "    '${1:footer}',",
+            "    [",
+            "        'ROOT_MENU_TYPE' => '${2:about}',",
+            "        'MAX_LEVEL' => '1',",
+            "        'CHILD_MENU_TYPE' => '',",
+            "        'USE_EXT' => 'N',",
+            "        'DELAY' => 'N',",
+            "        'ALLOW_MULTI_SELECT' => 'N',",
+            "        'CACHE_TYPE' => defined('APPLICATION_ENV')&&APPLICATION_ENV=='dev'?'N':'A',",
+            "        'MENU_CACHE_TIME' => 86399 /*\\\\App\\\\Settings::getCacheTTL()*/,",
+            "        'MENU_CACHE_USE_GROUPS' => 'Y',",
+            "        'MENU_CACHE_GET_VARS' => '',",
+            "        'TEMPLATE' => [",
+            "          'TITLE' => '${3:О компании}'",
+            "        ]",
+            "      ]",
+            "  );?>"
+        ],
+        "description": "Проверяет установлен ли модуль и если установлен, то подключает его."
+    }
+}
