@@ -44,20 +44,21 @@
         ],
         "description": ""
     },
-    "Context.Reques.Uri": {
+    "Context.Request.Uri": {
         "prefix": ["d7ContextRequestUri","d7RequestUri","d7Uri"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
             "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
             "\\$request = \\$context->getRequest();",
+            "\\$Path = (new \\\\Bitrix\\\\Main\\\\Web\\\\Uri(\\$request->getRequestUri()))->getPath(); // это то, что вы искали",
             "\\$Uri = \\$request->getRequestUri();",
             "//Возвращает текущую страницу без параметров (аналог \\$APPLICATION->GetCurPage())",
-            "//\\$request->getRequestedPage()",
+            "//\\$request->getRequestedPage();",
             "//Проверяет, была ли страница запрошена методом аякс",
-            "//\\$request->isAjaxRequest()",
+            "//\\$request->isAjaxRequest();",
             "//Проверяет, является ли текущая страница страницей административного раздела",
-            "//\\$request->isAdminSection()"
+            "//\\$request->isAdminSection();"
         ],
         "description": "Возвращает текущую страницу (аналог \\$APPLICATION->GetCurPageParam())"
     },

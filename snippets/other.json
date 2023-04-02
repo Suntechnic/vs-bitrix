@@ -1,4 +1,27 @@
 {
+    "Menu": {
+        "scope": "php",
+        "prefix": ["menu"],
+        "body": [
+            "$aMenuLinks = [",
+            "        [",
+            "                'История успеха',",
+            "                '/about/history/',",
+            "                [],",
+            "                [],",
+            "                ''",
+            "            ],",
+            "        [",
+            "                'Миссия, ценности',",
+            "                '/about/mission/',",
+            "                [],",
+            "                [],",
+            "                ''",
+            "            ]",
+            "    ];"
+        ],
+        "description": "Файл меню"
+    },
     "Bitrix.user": {
         "scope": "php",
         "prefix": "user",

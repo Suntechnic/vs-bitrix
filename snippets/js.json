@@ -30,14 +30,14 @@
         ],
         "description": "Добавляет обработчик события все ресурсы загружены и DOM структура доступна для записи"
     },
-    "BX.ajax.runAction": {
+    "BX.ajax.runAction+": {
         "scope": "javascript",
         "prefix": ["bxAjaxRunAction","runAjax"],
         "body": [
 			"// https://dev.1c-bitrix.ru/api_help/js_lib/ajax/bx_ajax_runaction.php",
 			"BX.ajax.runAction('vendor:module.api.class.method', {",
 			"        method: 'POST',",
-			"        data: { // объект данны:  {Object|FormData}",
+			"        data: { // объект данных:  {Object|FormData}",
 			"            folderId: 1 ",
 			"        },",
 			"        analyticsLabel: {",
@@ -73,5 +73,70 @@
 			"    );"
         ],
         "description": "Метод для запуска аякс-действий в модуле"
+    },
+    "BX.ajax.runComponentAction+": {
+        "scope": "javascript",
+        "prefix": ["bxAjaxrunComponentAction","runComponentAction","runComponentAjax","runAjax"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/ajax/bx_ajax_runcomponentaction.php",
+			"BX.ajax.runComponentAction('vendor:component', 'execute', {",
+            "        mode: 'class', //это означает, что мы хотим вызывать действие из class.php",
+            "        data: {",
+            "            person: 'Hero!' //данные будут автоматически замаплены на параметры метода ",
+            "       },",
+            "       analyticsLabel: {",
+            "           viewMode: 'grid',",
+            "           filterState: 'closed'",
+            "       }",
+            "   }).then(function (response) {",
+            "       console.log(response);",
+            "       /**",
+            "       {",
+            "           'status': 'success', ",
+            "           'data': 'Hi Hero!', ",
+            "           'errors': []",
+            "        }",
+            "       **/",
+            "    }, function (response) {",
+            "        //сюда будут приходить все ответы, у которых status !== 'success'",
+            "        console.log(response);",
+            "        /**",
+            "        {",
+            "            'status': 'error', ",
+            "            'errors': [...]",
+            "        }",
+            "        **/",
+            "    });"
+        ],
+        "description": "Метод для запуска аякс-действий в компоненте"
+    },
+    "BX.ajax+": {
+        "scope": "javascript",
+        "prefix": ["bxAjax","ajax"],
+        "body": [
+			"// https://dev.1c-bitrix.ru/api_help/js_lib/ajax/bx_ajax.php",
+			"BX.ajax({",  
+            "        url: '/bitrix/services/main/ajax.php?mode=class&c=vendor:component&action=execute',",  
+            "        data: {",  
+            "            // данные",  
+            "        },",  
+            "        method: 'POST',",  
+            "        dataType: 'html', // html|json|script – данные какого типа предполагаются в ответе",  
+            "        timeout: 30,",  
+            "        async: true,",  
+            "        processData: true, // нужно ли сразу обрабатывать данные?",  
+            "        scriptsRunFirst: true, // нужно ли выполнять все найденные скрипты перед тем, как отдавать сожеримое обработчику или только те, в тэге которых присутствует атрибут bxrunfirst",  
+            "        emulateOnload: true, // нужно ли эмулировать событие window.onload для загруженных скриптов",  
+            "        start: true, // отправить ли запрос сразу или он будет запущен вручную",  
+            "        cache: false, // в случае значения false к параметру URL будет добавляться случайный кусок, чтобы избежать браузерного кэширования",  
+            "        onsuccess: (data) => {",  
+            "            console.log(response);",  
+            "        },",  
+            "        onfailure: () => {",  
+            "            console.log(response);",  
+            "        }",  
+            "    });"
+        ],
+        "description": "Метод для отправки ajax-запросов"
     }
 }
