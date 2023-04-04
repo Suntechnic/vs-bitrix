@@ -1,12 +1,12 @@
 {
     "Main.Ui.Extension.load": {
-        "prefix": ["uiextensionload","uiextensionsload"],
+        "prefix": ["uiExtensionLoad","uiExtensionsLoad"],
         "body": [
             "\\\\Bitrix\\\\Main\\\\UI\\\\Extension::load([",
             "\t\t'${1:extesioname}'",
             "\t]);"
         ],
-        "description": "Статический метод возвращает document root сервера."
+        "description": "Загружает js расширение"
     },
     
     "Main.Application.getDocumentRoot": {

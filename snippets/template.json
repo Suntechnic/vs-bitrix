@@ -1,0 +1,78 @@
+{
+    "Template.Prolog": {
+        "prefix": "bxProlog",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');?>",
+            "$0"
+        ],
+        "description": "Подключение пролога."
+    },
+    "Template.PrologBefore": {
+        "prefix": "bxPrologBefore",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');?>",
+            "$0"
+        ],
+        "description": "Подключение служебной части пролога."
+    },
+    "Template.PrologAfter": {
+        "prefix": "bxPrologAfter",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_after.php');?>",
+            "$0"
+        ],
+        "description": "Подключение визуальной части пролога."
+    },
+    "Template.Epilog": {
+        "prefix": "bxEpilog",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>"
+        ],
+        "description": "Подключение эпилога."
+    },
+    "Template.EpilogBefore": {
+        "prefix": "bxEpilogBefore",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_before.php');?>",
+            "$0"
+        ],
+        "description": "Подключение визуальной части эпилога."
+    },
+    "Template.EpilogAfter": {
+        "prefix": "bxEpilogAfter",
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_after.php');?>"
+        ],
+        "description": "Подключение служебной части эпилога."
+    },
+    "Template.Page": {
+        "prefix": ["bxPage","bxProlog"],
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');?>",
+            "$0",
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>"
+        ],
+        "description": "Новая страница"
+    },
+    "Template.Page+": {
+        "prefix": ["bxPage","bxProlog"],
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');",
+            "\\$APPLICATION->SetTitle('Главная');",
+            "\\$APPLICATION->SetPageProperty('page_type','mine');",
+            "?>",
+            "$0",
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>"
+        ],
+        "description": "Новая страница"
+    },
+    "Template.BlankPage": {
+        "prefix": ["bxPage","bxBlankPage"],
+        "body": [
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');?>",
+            "$0",
+            "<?require(\\$_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_after.php');?>"
+        ],
+        "description": "Пустая техническая страница"
+    }
+}

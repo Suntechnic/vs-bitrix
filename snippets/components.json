@@ -2,7 +2,7 @@
     "Components.bitrix:menu": {
         "prefix": ["bitrix:menu","load"],
         "body": [
-            "<?$APPLICATION->IncludeComponent(",
+            "<?\\$APPLICATION->IncludeComponent(",
             "    'bitrix:menu',",
             "    '${1:footer}',",
             "    [",

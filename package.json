@@ -26,6 +26,10 @@
 				"path": "./snippets/components.json"
 			},
 			{
+				"language": "html",
+				"path": "./snippets/template.json"
+			},
+			{
 				"language": "javascript",
 				"path": "./snippets/js.json"
 			},
