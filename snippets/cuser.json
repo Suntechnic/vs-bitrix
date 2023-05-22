@@ -1,6 +1,6 @@
 {
     "CUser.add": {
-        "prefix": "cuseradd",
+        "prefix": "CUserAdd",
         "body": [
             "\\$rsUser = new CUser;",
             "\\$dctFields = Array(",
@@ -21,14 +21,14 @@
         "description": "Создает нового пользователя."
     },
     "CUser.delete": {
-        "prefix": "cuserdelete",
+        "prefix": "CUserDelete",
         "body": [
             "CUser::Delete('${1:usrid}');"
         ],
         "description": "Удаляет пользователя."
     },
     "CUser.GetByID": {
-        "prefix": "cusergetbyid",
+        "prefix": "CUserGetById",
         "body": [
             "\\$dctUser = CUser::GetByID('${1:usrid}')->fetch();",
             "if(is_array(\\$dctUser)) {",
@@ -38,25 +38,22 @@
         "description": "Возвращает пользователя по его ID."
     },
     "CUser.GetList": {
-        "prefix": "cusergetlist",
+        "prefix": ["CUserGetList","UserList","UserGetList","ListUser"],
         "body": [
-            "\\$dctFilter = array(",
-            "\t'ACTIVE'    => 'Y',",
-            "\t'ID'        => '${1:usrid}'",
-            ");",
-            "\\$rdbUsers = CUser::GetList(",
-            "\t(\\$by = 'personal_country'),",
-            "\t(\\$order = 'desc'),",
-            "\t'\\$dctFilter'",
-            ");",
-            "while(\\$dctUser = \\$rdbUsers->fetch()){",
-            "\tvar_export(\\$dctUser);",
+            "// https://dev.1c-bitrix.ru/api_help/main/reference/cuser/getlist.php",
+            "\\$dctFilter = [",
+            "\t\t'ID'                  => '1 | 2',",
+            "\t\t'GROUPS_ID'           => [1,4,10]",
+            "\t];",
+            "\\$rdb = \\\\CUser::GetList((\\$by='personal_country'), (\\$order='desc'), \\$dctFilter);",
+            "while (\\$dctUsers = \\$rdb->fetch()) {",
+            "\t",
             "}"
         ],
         "description": "Возвращает список пользователей."
     },
     "CUser.Update": {
-        "prefix": "cuserupdate",
+        "prefix": "CUserUpdate",
         "body": [
             "\\$dctFields = array(",
             "\t'NAME'  => '${1:newusername}',",

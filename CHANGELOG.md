@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.2.2] - 2023-05-22
+
+- Добавление снипетa urelrewrite / Adding snippet urelrewrite
+- Мелкие исправления / Fix bugs
+- Обогащение префиксов / Enrichment of prefixesы
 
 ## [0.2.1] - 2023-04-04
 
@@ -14,7 +19,7 @@
 - Расширены некоторые префиксы / Expanded some prefixes
 - Добавлены группы снипетов связанных с ИМ: d7catalog и d7order / Added snippet groups related to e-commerce: d7catalog and d7order
 - Добавлен CIBlockElement.SetPropertyValuesEx / New: CIBlockElement.SetPropertyValuesEx
-- Добавлена группа снипетов исключений /  Added snippet group of exceptions
+- Добавлена группа снипетов исключений /  Added snippet group of exceptions 
 - Мелкие исправления / Fix bugs
 
 ## [0.1.4] - 2023-03-23

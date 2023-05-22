@@ -50,7 +50,7 @@
         "description": "Отображает HTML с навигационной цепочкой."
     },
     "APPLICATION.AddChainItem": {
-        "prefix": ["APPLIaddChainItem","AddChainItem"],
+        "prefix": ["APPLIaddChainItem","AddChainItem","AddNavChain"],
         "body": [
             "/*",
             "https://dev.1c-bitrix.ru/api_help/main/reference/cmain/addchainitem.php",

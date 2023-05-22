@@ -34,7 +34,7 @@
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
             "\\$request = \\$context->getRequest();",
             "//Возвращает значение переменной запроса: (аналог переменной из \\$_REQUEST):",
-            "\\$IdElement = \\$request->get('ELEMENT_ID')",
+            "\\$IdElement = \\$request->get('ELEMENT_ID');",
             "//Возвращает значение переменной запроса POST",
             "//\\$request->getPost('ID');",
             "//Возвращает значение переменной запроса GET ",
