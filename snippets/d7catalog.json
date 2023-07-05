@@ -11,8 +11,8 @@
         ],
         "description": ""
     },
-    "d7Catalog.Pice.getList": {
-        "prefix": ["d7CatalogPiceGetList","d7PiceGetList","PiceGetList","GetPrices","Prices","цены"],
+    "d7Catalog.Price.getList": {
+        "prefix": ["d7CatalogPriceGetList","d7PriceGetList","PriceGetList","GetPrices","Prices","цены"],
         "body": [
             "\\$rdbPrice = \\\\Bitrix\\\\Catalog\\\\Model\\\\Price::getList([",
             "\t\t'order'=>['PRICE'=>'ASC'],",
