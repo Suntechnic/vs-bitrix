@@ -1,0 +1,15 @@
+{
+    "Component_Epilog.ExtensionLoad": {
+        "prefix": ["IncludeExtension","uiExtensionLoad"],
+        "body": [
+            "\\$dctJsConfig = include('js/config.php');",
+            "if (\\$dctJsConfig) {",
+            "    if ($dctJsConfig['rel']) \\\\Bitrix\\\\Main\\\\UI\\\\Extension::load(\\$dctJsConfig['rel']);",
+            "",
+            "    \\\\Bitrix\\\\Main\\\\Page\\\\Asset::getInstance()->addJs(\\$templateFolder.'/js/'.\\$dctJsConfig['js']);",
+            "    \\\\Bitrix\\\\Main\\\\Page\\\\Asset::getInstance()->addCss(\\$templateFolder.'/js/'.\\$dctJsConfig['css']);",
+            "}"
+        ],
+        "description": "Подключение js расширения из шаблона компонента"
+    }
+}

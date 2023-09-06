@@ -3,6 +3,10 @@
 ## [0.2.3] - 2023-
 
 - Добавление снипетов date / Adding snippets date
+- d7{l} => d7{L}
+- Добавлен IncludeFile / Adding IncludeFile
+- Добавление снипетов эпилога компонента / Adding component_epilog snippets
+- Мелкие исправления / Fix bugs
 
 ## [0.2.2] - 2023-05-22
 

@@ -79,6 +79,10 @@
 			},
 			{
 				"language": "php",
+				"path": "./snippets/component_epilog.json"
+			},
+			{
+				"language": "php",
 				"path": "./snippets/csite.json"
 			},
 			{

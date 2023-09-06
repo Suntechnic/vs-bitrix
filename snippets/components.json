@@ -1,6 +1,6 @@
 {
     "Components.bitrix:menu": {
-        "prefix": ["bitrix:menu","load"],
+        "prefix": ["bitrix:menu"],
         "body": [
             "<?\\$APPLICATION->IncludeComponent(",
             "    'bitrix:menu',",
@@ -22,6 +22,22 @@
             "      ]",
             "  );?>"
         ],
-        "description": "Проверяет установлен ли модуль и если установлен, то подключает его."
+        "description": "Компонент меню"
+    },
+    "IncludeFile": {
+        "prefix": ["IncludeFile"],
+        "body": [
+            "<?\\$APPLICATION->IncludeFile( // https://dev.1c-bitrix.ru/api_help/main/reference/cmain/includefile.php",
+            "        '/local/templates/.default/includes/file.php', // Путь к подключаемому файлу.",
+            "        [ // параметры передаваемые в подключаемый файл",
+            "                'PARAM' => 'VAL'",
+            "            ],",
+            "        [ // параметры подключения",
+            "                'MODE'      => 'php',",
+            "                'NAME'      => 'Файл'",
+            "            ]",
+            "    );?>"
+        ],
+        "description": "Подключение файла"
     }
 }
