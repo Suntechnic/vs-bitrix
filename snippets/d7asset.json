@@ -8,7 +8,7 @@
         "description": "Подключение класса стилей."
     },
     "D7Asset.addString": {
-        "prefix": "d7addString",
+        "prefix": "d7AddString",
         "body": [
             "\\Bitrix\\Main\\Page\\Asset::getInstance()->addString('${1:string}');",
             "$0"
@@ -16,7 +16,7 @@
         "description": "Метод добавляет строку в секцию <head>…</head> сайта."
     },
     "D7Asset.addCss": {
-        "prefix": "d7addCss",
+        "prefix": "d7AddCss",
         "body": [
             "\\Bitrix\\Main\\Page\\Asset::getInstance()->addCss('${1:style.css}');",
             "$0"
@@ -24,7 +24,7 @@
         "description": "Метод добавляет css в секцию <head>…</head> сайта."
     },
     "D7Asset.addJs": {
-        "prefix": "d7addJs",
+        "prefix": "d7AddJs",
         "body": [
             "\\Bitrix\\Main\\Page\\Asset::getInstance()->addJs('${1:script.js}');",
             "$0"

@@ -1,10 +1,14 @@
 # Change Log
 
+## [0.2.3] - 2023-
+
+- Добавление снипетов date / Adding snippets date
+
 ## [0.2.2] - 2023-05-22
 
 - Добавление снипетa urelrewrite / Adding snippet urelrewrite
 - Мелкие исправления / Fix bugs
-- Обогащение префиксов / Enrichment of prefixesы
+- Обогащение префиксов / Enrichment of prefixes
 
 ## [0.2.1] - 2023-04-04
 

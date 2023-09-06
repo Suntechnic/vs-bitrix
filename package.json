@@ -151,6 +151,10 @@
 			},
 			{
 				"language": "php",
+				"path": "./snippets/date.json"
+			},
+			{
+				"language": "php",
 				"path": "./snippets/other.json"
 			}
 		]

@@ -1,0 +1,20 @@
+{
+    "CreateDate": {
+        "prefix": ["CreateDateTime","d7CreateDateTime","ДатаВремя"],
+        "body": [
+            "//https://mrcappuccino.ru/blog/post/d7-work-with-datetime",
+            "//\\$datetime = \\\\Bitrix\\\\Main\\\\Type\\\\DateTime::createFromTimestamp(1346506620);",
+            "\\$datetime = new \\\\Bitrix\\\\Main\\\\Type\\\\DateTime(\\$dctItem['DATE_ACTIVE_FROM']?\\$dctItem['DATE_ACTIVE_FROM']:\\$dctItem['TIMESTAMP_X']);"
+        ],
+        "description": "Создание объекта датывремени"
+    },
+    "FormatDate": {
+        "prefix": ["FormatDateTime","d7FormatDateTime","ДатаВремя"],
+        "body": [
+            "//https://dev.1c-bitrix.ru/api_help/main/functions/date/formatdate.php",
+            "\\$Timestamp = \\\\MakeTimeStamp(\\$dctItem['DATE_ACTIVE_FROM']?\\$dctItem['DATE_ACTIVE_FROM']:\\$dctItem['TIMESTAMP_X']);",
+            "\\$dctItem['DISPLAY_DATE'] = \\\\FormatDate('j F Y',\\$Timestamp);"
+        ],
+        "description": "В d7 пока не завезли форматирование даты (("
+    }
+}

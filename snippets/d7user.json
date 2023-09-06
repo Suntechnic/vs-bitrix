@@ -1,6 +1,6 @@
 {
     "D7User": {
-        "prefix": "d7user",
+        "prefix": "d7User",
         "body": [
             "\\$rdbUsers = \\\\Bitrix\\\\Main\\\\UserTable::getList(array(",
             "\t'select' => array('LOGIN'),",
