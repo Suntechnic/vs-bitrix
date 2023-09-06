@@ -1,6 +1,6 @@
 {
     "D7Debug.write": {
-        "prefix": "d7debugWrite",
+        "prefix": "d7DebugWrite",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::writeToFile(array('${1:\\$varname}' => ${1:\\$varname}), '', '${2:filename}.txt');",
             "$0"
@@ -8,7 +8,7 @@
         "description": "Печать переменных в файл. Использует print_r."
     },
     "D7Debug.dump": {
-        "prefix": "d7debugDump",
+        "prefix": "d7DebugDump",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::dumpToFile(array('${1:\\$varname}' => ${1:\\$varname}), '', '${2:filename}.txt');",
             "$0"
@@ -16,7 +16,7 @@
         "description": "Печать переменных в файл. Использует var_dump."
     },
     "D7Debug.startTime": {
-        "prefix": "d7debugStartTime",
+        "prefix": "d7DebugStartTime",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::startTimeLabel('${1:label}');",
             "$0"
@@ -24,7 +24,7 @@
         "description": "Устанавливает метку начала отслеживания времени выполнения фрагмента кода."
     },
     "D7Debug.endTime": {
-        "prefix": "d7debugEndTime",
+        "prefix": "d7DebugEndTime",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::endTimeLabel('${1:label}');",
             "$0"
@@ -32,7 +32,7 @@
         "description": "Устанавливает метку окончания отслеживания времени выполнения фрагмента кода."
     },
     "D7Debug.getTime": {
-        "prefix": "d7debugGetTime",
+        "prefix": "d7DebugGetTime",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::getTimeLabels();",
             "$0"
@@ -40,7 +40,7 @@
         "description": "Вывод массива пользовательских меток выполнения фрагментов кода."
     },
     "D7Debug.time": {
-        "prefix": "d7debugTime",
+        "prefix": "d7DebugTime",
         "body": [
             "\\\\Bitrix\\\\Main\\\\Diag\\\\Debug::startTimeLabel('${1:label}');",
             "${TM_SELECTED_TEXT://yourcode}",

@@ -10,7 +10,7 @@
     },
     
     "Main.Application.getDocumentRoot": {
-        "prefix": ["d7documentroot","document_root","$_SERVER['DOCUMENT_ROOT']"],
+        "prefix": ["d7Documentroot","document_root","$_SERVER['DOCUMENT_ROOT']"],
         "body": [
             "\\$DocumentRoot = \\\\Bitrix\\\\Main\\\\Application::getDocumentRoot();"
         ],
@@ -25,7 +25,7 @@
         "description": "Проверяет установлен ли модуль и если установлен, то подключает его."
     },
     "Main.Loader.registerAutoLoadClasses": {
-        "prefix": ["cmoduleaddautoload","autoload","d7registerautoloadclasses"],
+        "prefix": ["cmoduleaddautoload","autoload","d7Registerautoloadclasses"],
         "body": [
             "\\\\Bitrix\\\\Main\\\\Loader::registerAutoLoadClasses(",
             "\tnull,",
@@ -65,7 +65,7 @@
         "description": "Действия свфайлами"
     },
     "Main.IO.Directory": {
-        "prefix": ["d7directory","d7exists","d7iodirectory","перебрать файлов в папке"],
+        "prefix": ["d7Directory","d7Exists","d7Iodirectory","перебрать файлов в папке"],
         "body": [
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/io/file/index.php",
             "\\$directory = new \\\\Bitrix\\\\Main\\\\IO\\\\Directory($Path);",

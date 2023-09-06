@@ -1,6 +1,6 @@
 {
     "D7Config": {
-        "prefix": "d7config",
+        "prefix": "d7Config",
         "body": [
             "//get from /bitrix/.settings.php",
             "\\$realm = \\\\Bitrix\\\\Main\\\\Config\\\\Configuration::getValue('${1:param}');",

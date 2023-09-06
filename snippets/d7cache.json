@@ -1,6 +1,6 @@
 {
     "D7CacheCode": {
-        "prefix": "d7cachecode",
+        "prefix": "d7Cachecode",
         "body": [
             "\\$cache = \\\\Bitrix\\\\Main\\\\Data\\\\Cache::createInstance();",
             "if (\\$cache->initCache(${1:7200}, ${2:'cache_id'}, ${3:${4|'cache_dir',__CLASS__ . '/' . __FUNCTION__|}})) {",

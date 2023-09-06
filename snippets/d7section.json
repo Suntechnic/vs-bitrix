@@ -1,6 +1,6 @@
 {
     "D7section": {
-        "prefix": ["d7sectionList","d7sectionsList","d7getListSection"],
+        "prefix": ["d7SectionList","d7SectionsList","d7GetListSection"],
         "body": [
             "\\$rdbSections = \\\\Bitrix\\\\Iblock\\\\SectionTable::getList(array(",
             "\t'select' => array('NAME'),",
