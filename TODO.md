@@ -1,0 +1,1 @@
+Добавить HttpClient: https://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7

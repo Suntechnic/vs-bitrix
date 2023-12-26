@@ -1,6 +1,6 @@
 {
     "Main.Ui.Extension.load": {
-        "prefix": ["uiExtensionLoad","uiExtensionsLoad","IncludeExtension"],
+        "prefix": ["uiExtensionLoad","uiExtensionsLoad","IncludeExtension","LoadExtension"],
         "body": [
             "\\\\Bitrix\\\\Main\\\\UI\\\\Extension::load([",
             "\t\t'${1:extesioname}'",

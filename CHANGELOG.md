@@ -1,6 +1,13 @@
 # Change Log
 
-## [0.2.3] - 2023-
+## [0.2.4] - 2023-12-27
+
+- Добавлен \Bitrix\Sale\Order::getList / Adding \Bitrix\Sale\Order::getList
+- Добавлен \Bitrix\Main\Web / Adding \Bitrix\Main\Web
+- Обогащение префиксов / Enrichment of prefixes
+- Мелкие исправления / Fix bugs
+
+## [0.2.3] - 2023-09-06
 
 - Добавление снипетов date / Adding snippets date
 - d7{l} => d7{L}

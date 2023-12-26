@@ -31,10 +31,11 @@
         "description": "Возвращает свойство по его ID."
     },
     "CIBlockProperty.GetList": {
-        "prefix": "CIBlockPropList",
+        "prefix": ["CIBlockPropertiesList","CIBlockPropertyList","CIBlockPropList"],
         "body": [
             "\\$rdbProperties = CIBlockProperty::GetList(",
-            "\t\t\\$dctOrder  = ['SORT' => 'ASC'],",
+            "\t\t['SORT' => 'ASC'],",
+            "\t\t[",
             "\t\t\t\t'ACTIVE'    => 'Y',",
             "\t\t\t\t'IBLOCK_ID' => '${1:IBLOCK_ID}',",
             "\t\t\t]",

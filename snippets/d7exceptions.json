@@ -2,7 +2,7 @@
     "SystemException": {
         "prefix": ["d7SystemException","SystemException","throwSystemException","исключение"],
         "body": [
-			"throw new \\\\Bitrix\\\\Main\\\\ObjectNotFoundException('${1:текст ошибки}');"
+			"throw new \\\\Bitrix\\\\Main\\\\SystemException('${1:текст ошибки}');"
         ],
         "description": "базовый класс всех системных исключений"
     },
@@ -28,7 +28,7 @@
         "description": "классы исключений файлового ввода-вывода"
     },
     "ObjectNotFoundException": {
-        "prefix": ["d7ObjectNotFoundException","throwObjectNotFoundException"],
+        "prefix": ["d7ObjectNotFoundException","throwObjectNotFoundException","ExceptionNotFound"],
         "body": [
 			"throw new \\\\Bitrix\\\\Main\\\\ObjectNotFoundException ('${1:объект не существует}');"
         ],

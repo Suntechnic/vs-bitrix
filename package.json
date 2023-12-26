@@ -2,7 +2,7 @@
 	"name": "bitrix-snippets",
 	"displayName": "Bitrix snippets 2023",
 	"description": "",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"publisher": "Suntechnic",
 	"icon": "images/bs_logo.png",
 	"bugs": {
@@ -152,6 +152,10 @@
 			{
 				"language": "php",
 				"path": "./snippets/d7user.json"
+			},
+            {
+				"language": "php",
+				"path": "./snippets/d7web.json"
 			},
 			{
 				"language": "php",

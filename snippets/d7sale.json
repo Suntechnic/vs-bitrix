@@ -1,4 +1,21 @@
 {
+    "d7Sale.Order.List": {
+        "prefix": ["d7SaleOrderList","ListOrder"],
+        "body": [
+            "//https://nikaverro.ru/blog/bitrix/sale-order-bitrix-api-d7/",
+            "\\$lstOrders = \\\\Bitrix\\\\Sale\\\\Order::getList([",
+            "        'select' => ['ID','PRICE_DELIVERY','PRICE'],",
+            "        'filter' => [",
+            "            'USER_ID' => \\$USER->GetID(), //по пользователю",
+            "            'STATUS_ID' =>'F', //по статусу",
+            "            'PAYED' => 'Y', //оплаченные",
+            "            'CANCELED' =>'N', //не отмененные",
+            "        ],",
+            "        'order' => ['ID' => 'DESC']",
+            "    ])->fetchAll();"
+        ],
+        "description": "список заказов"
+    },
     "d7Sale.Order.Load": {
         "prefix": ["d7SaleOrderLoad","LoadOrder"],
         "body": [
@@ -27,8 +44,8 @@
             "\\$order->isShipped(); // true, если отправлен",
             "\\$order->isCanceled(); // true, если отменен",
             "",
-            "\\$paymentIds = \\$order->getPaymentSystemId(); // id способов оплат",
-            "\\$deliveryIds = \\$order->getDeliverySystemId(); // id способов доставки",
+            "\\$lstPaymentIds = \\$order->getPaymentSystemId(); // id способов оплат",
+            "\\$lstDeliveryIds = \\$order->getDeliverySystemId(); // id способов доставки",
             "",
             "\\$discount = \\$order->getDiscount(); // скикдки",
             "\\$dctDiscount = \\$discount->getApplyResult();",
