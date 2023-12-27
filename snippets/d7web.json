@@ -1,0 +1,40 @@
+{
+    "D7WebUri+": {
+        "prefix": ["D7WebUri","RequestUri","GetCurPageParam"],
+        "body": [
+            "// https://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7",
+            "\\$uri = new \\\\Bitrix\\\\Main\\\\Web\\\\Uri('http://username:password@mrcappuccino.ru/blog/post/work-with-http-bitrix-d7/?param1=value#comments');",
+            "\\$uri->getLocator(); // 'http://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7/?param1=value'",
+            "\\$uri->getUri(); // 'http://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7/?param1=value#comments'",
+            "\\$uri->getHost(); // 'mrcappuccino.ru'",
+            "\\$uri->getUser(); // 'username'",
+            "\\$uri->getPass(); // 'password'",
+            "\\$uri->getPath(); // '/blog/post/work-with-http-bitrix-d7/'",
+            "\\$uri->getPathQuery(); // '/blog/post/work-with-http-bitrix-d7/?param1=value'",
+            "\\$uri->getPort(); // 80",
+            "\\$uri->getQuery(); // 'param1=value'",
+            "\\$uri->getScheme(); // 'http'",
+            "\\$uri->deleteParams(['param1']);",
+            "\\$uri->getUri(); // 'http://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7/#comments'",
+            "\\$uri->addParams(['param2' => 'value']);",
+            "\\$uri->getUri(); // 'http://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7/?param2=value#comments'"
+        ],
+        "description": ""
+    },
+    "D7WebHttpClient+": {
+        "prefix": ["D7WebHttpClient","D7Get","D7Post"],
+        "body": [
+            "// https://mrcappuccino.ru/blog/post/work-with-http-bitrix-d7",
+            "\\$httpClient = new \\\\Bitrix\\\\Main\\\\Web\\\\HttpClient(\\$dctOptions);",
+            "\\$httpClient->setHeader('Content-Type', 'application/json', true);",
+            "\\$httpClient->setHeader('Authorization', 'Bearer '.\\$Token, true);",
+            "if (\\$Method == 'post') {",
+            "\t\t\\$Respose = \\$httpClient->post(\\$URL, json_encode(\\$dctData));",
+            "} elseif (\\$Method == 'get') {",
+            "\t\t\\$Respose = \\$httpClient->get(\\$URL);",
+            "}",
+            "if (\\$httpClient->getStatus() == 200) return \\$Respose;"
+        ],
+        "description": ""
+    }
+}

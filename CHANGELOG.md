@@ -2,8 +2,11 @@
 
 ## [0.2.4] - 2023-12-27
 
-- Добавлен \Bitrix\Sale\Order::getList / Adding \Bitrix\Sale\Order::getList
 - Добавлен \Bitrix\Main\Web / Adding \Bitrix\Main\Web
+
+## [0.2.4] - 2023-12-27
+
+- Добавлен \Bitrix\Sale\Order::getList / Adding \Bitrix\Sale\Order::getList
 - Обогащение префиксов / Enrichment of prefixes
 - Мелкие исправления / Fix bugs
 
