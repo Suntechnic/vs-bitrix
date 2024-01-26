@@ -1,0 +1,9 @@
+{
+    "D7LocationName": {
+        "prefix": ["D7LocationName"],
+        "body": [
+            "\\$FullName = \\\\Bitrix\\\\Sale\\\\Location\\\\Admin\\\\LocationHelper::getLocationPathDisplay(\\$LocationId);"
+        ],
+        "description": "Полное название местоположения"
+    }
+}

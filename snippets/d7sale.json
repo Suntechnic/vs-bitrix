@@ -24,7 +24,7 @@
         "description": "Загрузка заказа"
     },
     "d7Sale.Order.Load+": {
-        "prefix": ["d7SaleOrderLoad+","LoadOrder+"],
+        "prefix": ["d7SaleOrderLoad+","LoadOrder+","GetDelivery","GetPayment","GetDiscount"],
         "body": [
             "//https://mrcappuccino.ru/blog/post/work-with-order-bitrix-d7",
             "\\$order = \\\\Bitrix\\\\Sale\\\\Order::load(\\$OrderId);",
@@ -56,6 +56,23 @@
             "",
             "//\\$order->setField('USER_DESCRIPTION', 'Заказ в один клик'); // изменяем поле",
             "//\\$order->save();"
+        ],
+        "description": "Загрузка заказа и получение его данных"
+    },
+    "d7Sale.Order.GetPayment": {
+        "prefix": ["GetPayment"],
+        "body": [
+            "\\$lstPaymentIds = \\$order->getPaymentSystemId(); // id способов оплат"
+        ],
+        "description": "Загрузка заказа и получение его данных"
+    },
+    "d7Sale.Order.GetDelivery": {
+        "prefix": ["GetDelivery"],
+        "body": [
+            "\\$order->getDeliveryPrice(); // Стоимость доставки",
+            "\\$order->isAllowDelivery(); // true, если разрешена доставка",
+            "\\$order->isShipped(); // true, если отправлен",
+            "\\$lstDeliveryIds = \\$order->getDeliverySystemId(); // id способов доставки"
         ],
         "description": "Загрузка заказа и получение его данных"
     },

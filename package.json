@@ -133,6 +133,10 @@
 				"language": "php",
 				"path": "./snippets/d7lang.json"
 			},
+            {
+				"language": "php",
+				"path": "./snippets/d7location.json"
+			},
 			{
 				"language": "php",
 				"path": "./snippets/d7main.json"

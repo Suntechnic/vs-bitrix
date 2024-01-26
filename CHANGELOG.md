@@ -1,6 +1,13 @@
 # Change Log
 
-## [0.2.4] - 2023-12-27
+## [0.2.6] - 2024-
+
+- Обогащение префиксов / Enrichment of prefixes
+- Добавлены GetDelivery и GetPayment / Adding GetDelivery & GetPayment
+- Добавлены сниппеты местоположений / Adding locations
+- Выноc стайлгайд из README / export guide
+
+## [0.2.5] - 2023-12-27
 
 - Добавлен \Bitrix\Main\Web / Adding \Bitrix\Main\Web
 
