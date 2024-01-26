@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.2.6] - 2024-
+## [0.2.6] - 2024-01-26
 
 - Обогащение префиксов / Enrichment of prefixes
 - Добавлены GetDelivery и GetPayment / Adding GetDelivery & GetPayment
