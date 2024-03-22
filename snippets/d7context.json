@@ -68,6 +68,7 @@
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
             "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$request = \\$context->getRequest();",
             "\\$RequestedPage = \\$request->getRequestedPage()",
             "//Проверяет, была ли страница запрошена методом аякс",
             "//\\$request->isAjaxRequest()",
@@ -82,6 +83,7 @@
             "//https://dev.1c-bitrix.ru/api_d7/bitrix/main/application/getcontext.php",
             "//https://estrin.pw/bitrix-d7-snippets/s/httprequest/",
             "\\$context = \\\\Bitrix\\\\Main\\\\Application::getInstance()->getContext();",
+            "\\$request = \\$context->getRequest();",
             "//\\$request->isAjaxRequest()"
         ],
         "description": "Проверяет, была ли страница запрошена методом аякс"
